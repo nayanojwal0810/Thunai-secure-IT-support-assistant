@@ -1,0 +1,79 @@
+Title: Laptop Security Configuration Standards
+Original URL: https://handbook.gitlab.com/handbook/eta/corporate-it/end-user-services/laptop-management/laptop-security/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+Laptop Security Configuration Standards
+All laptops should be configured with security in mind. See the linked configuration guides and policies below.
+Do not install software with many known security vulnerabilities.
+Follow the Third Party Risk Management Procedure for review of services individually deployed on endpoint devices. After a decision regarding deployment of an endpoint management solution is made the process will be redesigned accordingly and services, where applicable, will be retroactively reviewed. Please ensure you continue to follow the requirements defined in the acceptable use policy.
+Using iOS or Android? See the Mobile Devices (Phones and Tablets) page.
+Using Linux? See the Linux Desktop Security Standards page.
+  
+  
+  
+  
+  
+  
+  
+  
+              This is a placeholder page.
+      
+          
+          
+              Overview When backing up data team members’ laptops should use GitLab’s Google Drive.
+Our …
+      
+          
+          
+              Overview All laptops are required to have full disk encryption enabled.
+All team members needed to …
+      
+          
+          
+              Overview All laptops need to have the operating system firewall enabled.
+GitLab uses SaaS web …
+      
+          
+          
+              Overview To help protect company data and improve collaboration, any yellow, orange, or red data …
+      
+          
+          
+              Overview This is a placeholder page. Please see the GitLab Password Guideslines and Password …
+      
+          
+          
+              Overview We do allow team members to use their laptop for limited personal use (at their discretion) …
+      
+          
+          
+              Overview GitLab has a large and ever growing fleet of laptops (a.k.a. endpoints) that Corporate …
+      
+          
+          
+              Overview We believe in staying up to date with security patches on all endpoint operating systems …
+      
+          
+          
+              Overview Please enable Touch ID on initial setup.
+We use WebAuthn for 2FA at GitLab. In other words, …
+      
+          
+          
+              Overview We use Google Chrome as our primary web browser since many of our collaboration and …
+      
+          
+          
+              Overview It is safe to connect to the wireless network at your home or a friend or family …
+      
+          
+          
+              Overview All GitLab team members must follow the clean desk / clear screen principle and keep their …
+      
+  
+  Last modified July 28, 2026: Retire defunct CorpSec functions and realign Corporate IT documentation (8f22e33f)

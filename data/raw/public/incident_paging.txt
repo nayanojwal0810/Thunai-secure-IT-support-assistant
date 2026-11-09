@@ -1,0 +1,57 @@
+Title: When to page
+Original URL: https://handbook.gitlab.com/handbook/eta/css/incidents/when-to-page/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+When to page
+If you have already determined that a page is needed, go straight to Paging Customer Support Systems.
+This page explains when you should (and should not) page the Customer Support Systems team. Paging interrupts whoever is on-call, so it should be reserved for situations that genuinely cannot wait until the next CSS team member comes online.
+For how Customer Support Systems works an incident once it is raised, see Incidents.
+Paging is based on impact
+We page based on impact, not on whether a component has failed. Something can be broken and still not warrant a page if the impact is minimal.
+When deciding, ask yourself one question:
+Can we still service our customers?
+If the answer is “no” (or “not for much longer”), and there is no viable workaround, it is likely page-worthy. The criticality level of the affected system will also help you gauge how serious the impact is.
+Page Customer Support Systems when
+- A system we manage is down or broken, it is having a material impact on customers, and there is no viable short-term workaround.
+  - Example: a Zendesk Global or Zendesk US Government outage or major degradation.
+- A failure prevents a significant portion of Support from working tickets or performing key customer workflows, even if customers are not yet aware of it.
+  - Example: tickets are not being processed by the Ticket Processor.
+  - Example: the Salesforce to Zendesk sync is not working.
+  - Example: the Support Ops Super App or Salesforce integration is failing and Support cannot perform key customer account or ticket workflows.
+- An automation or integration we own is actively causing harm. This includes sending incorrect or duplicate communications to customers, modifying or deleting data incorrectly, or exposing data to the wrong party.
+  - Example: a trigger or automation is mass-emailing customers incorrectly.
+  - Example: an AI agent integration is responding to customers inappropriately.
+- There is a suspected security or compliance issue involving our systems.
+  - Example: tokens or credentials are suspected to be compromised.
+- A declared GitLab incident requires Customer Support Systems involvement to be resolved.
+  - Example: Support needs urgent changes to Zendesk (such as temporary triggers, bulk ticket actions, or form changes) to manage the customer impact of an incident.
+Do not page Customer Support Systems when
+- A reasonable workaround exists and the impact is tolerable until the next CSS team member comes online.
+- The issue is cosmetic, or affects a single user or a small number of users.
+  - Example: one agent cannot see a view, or a macro contains a typo.
+- It only affects reporting or dashboards.
+  - Example: a Zendesk Explore report or dashboard is broken or showing incorrect data.
+- It is a request for a change or new functionality.
+  - Example: Support Portal changes, new macros, or changes to existing triggers.
+Examples
+The table below gives some common scenarios. These are guidance, not a complete list; always fall back to the impact question.
+| Scenario | Page? | Why | 
+|---|---|---|
+| Zendesk Global or Zendesk US Government is down | Yes | Customers cannot be serviced | 
+| Ticket Processor is not processing tickets | Yes | Breaks key Support workflows | 
+| Salesforce to Zendesk sync is failing | Yes | Breaks key Support workflows | 
+| Super App or Salesforce integration is failing and blocking account or ticket workflows | Yes | Breaks key Support workflows | 
+| An automation is sending duplicate emails to customers | Yes | Actively causing harm to customers | 
+| An Explore dashboard is not loading | No | Reporting only | 
+| A single agent has a permissions issue | No | Affects a single user | 
+| A request to change the Support Portal | No | Feature request, not an incident | 
+When you are unsure
+If you are not sure whether something meets the criteria above, raise it in the #customer_support_systems Slack channel first.
+If it is not acknowledged within 30 minutes and the impact is growing, page Customer Support Systems.
+Customer Support Systems does not currently provide 24/7 coverage in Slack. Outside of APAC/AMER working hours, if the issue meets the criteria to page Customer Support Systems, page rather than waiting on a Slack response.
+855f68ba)

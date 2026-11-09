@@ -1,0 +1,103 @@
+Title: Compass User Guide
+Original URL: https://handbook.gitlab.com/handbook/eta/corporate-it/compass/compass-guide/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+Compass User Guide
+Compass is the AI-powered support platform GitLab has adopted as the single place to get IT, People, and business-service help, get instant answers, and track your requests.
+Compass is built by an external vendor (see What is Compass? below) — GitLab has procured and configured it for internal use, and branded the end-user experience “Compass.”
+This guide covers everything a GitLab team member needs to know to get help through Compass: how to submit a request, what Compass can resolve automatically, how to track tickets, and where Compass is available today.
+What is Compass?
+Getting help at work should be effortless. Compass is the AI-powered support platform GitLab has procured to replace the patchwork of ticketing tools, Slack channels, access requests, and manual triage with one intelligent interface that meets you where you already work.
+Compass resolves issues automatically when it can, and routes your request to the right human team when it can’t, with full context already attached, so you never have to re-explain your issue.
+Important: Compass is not a GitLab-built product. It runs on Serval, a third-party AI-native IT Service Management (ITSM) platform that GitLab has licensed and configured for internal use. You may occasionally see the name “Serval” in URLs (such as app.serval.com) or in vendor documentation — Serval and Compass refer to the same underlying platform, but “Compass” is the name GitLab uses internally, and the name you’ll see and use day to day.
+Compass runs on three specialized AI agents
+| Agent | What it does | 
+|---|---|
+| Help Desk Agent | The front-line AI you talk to. Handles incoming requests via Slack, email, or the web portal, searching the knowledge base, resolving common issues automatically, provisioning access, and escalating to a human agent only when needed. | 
+| Automation Agent | Works behind the scenes to build and maintain the workflows that power auto-resolution, based on natural-language descriptions from the IT team. | 
+| Insights Agent | Continuously analyzes ticket patterns to surface new automation opportunities and knowledge gaps, so Compass gets better over time. | 
+As an end user, you’ll mainly interact with the Help Desk Agent. That’s the “Compass” that responds to you in Slack, email, or the portal.
+Why GitLab adopted Compass
+GitLab evaluated several AI-driven ITSM platforms on the market and selected Serval — branded internally as Compass — for its ability to deliver fast, automated support at scale, without requiring GitLab’s IT team to write custom code for every new workflow.
+What you gain
+| Benefit | Detail | 
+|---|---|
+| Faster resolution | Immediate AI response with troubleshooting steps, with no waiting on a human for common requests. | 
+| Smarter routing | Your ticket is routed to the right team automatically, based on the content and context of your request. | 
+| Fewer hops | Less back-and-forth to get to the right person or team. | 
+| One place for access requests | Submit and track access requests directly through Compass instead of separate tools. | 
+| Self-service options | Common requests (password resets, access grants, policy questions) are resolved automatically. | 
+| Seamless escalation | When a human is needed, Compass hands off full context, so you don’t have to re-explain your issue. | 
+| Built to grow | Compass launched with Enterprise Technology and is expanding to more teams and services over time. | 
+Compass is fully enabled on the backend as a procured, vendor-hosted platform. In most cases there is nothing you need to install or set up. See Your role as a Compass Member.
+Your role as a Compass Member
+Every GitLab team member is automatically provisioned as a Member in Compass via Okta SCIM sync. You do not need to sign up or create an account with the vendor directly. Simply authenticate with your @gitlab.com account (SSO) when prompted.
+As a Member, you can
+| Capability | Details | 
+|---|---|
+| Submit requests | Via Slack, email, or the Compass portal. | 
+| Browse the request catalog | Find and submit standard, pre-built service requests. | 
+| Track your own tickets | View the status and history of everything you’ve submitted. | 
+If you also work on a team that actively uses a specific Compass workspace (for example, IT, Legal, or Revenue Tech), you may additionally receive a role-based license, such as Agent, Contributor, or Builder, that grants extra permissions within that team’s workspace. To learn more about those roles, chat about this in Compass.
+How to get help: 3 ways to reach Compass
+There are three ways to reach Compass depending on your situation. Use the table below to find the right option, then follow the steps in the matching tab.
+| Option | Best for | Available when | 
+|---|---|---|
+| Compass Slack app (DM) | A 1:1, private support conversation | Slack is available | 
+| Compass portal / Okta tile | Browsing the request catalog, tracking tickets, all request types | Okta is available | 
+|  | All request types, as a fallback | Slack and Okta are both unavailable | 
+Use this for a 1:1 support experience, especially for sensitive requests or when you’d rather not post in a shared channel.
+- From your Slack sidebar, locate Compass under Apps (it’s added automatically, with no installation needed).
+- Send a message describing your request, e.g. “@Compass I need help with my Okta Verify on my mobile device.”
+- Compass responds and assists you directly. All messages are retained in Compass for reference and follow-up.
+Use this as a backup if Slack is unavailable, or when you want to browse the full request catalog or view your ticket history.
+- Log in to Okta and locate the Compass tile (or go directly to the Compass portal).
+- In the “What do you need help with?” field, describe your request, or browse the catalog for a structured request form.
+- Submit your request, and Compass will respond and escalate to a live agent if further assistance is needed.
+Use this only if both Slack and Okta are inaccessible. Save it_help@gitlab.com to your contacts so it’s ready when you need it. The Corporate IT team will follow up with you directly.
+What Compass can resolve automatically
+Compass can handle the following common requests without any human involvement:
+| Request type | What Compass does | 
+|---|---|
+| App access request | Grants time-bound access via Okta SSO or direct provisioning, based on your team’s policy. | 
+| Password / MFA reset | Executes the reset workflow automatically and confirms via Slack. | 
+| Question about GitLab policy | Searches the Public & Internal Handbook and returns a sourced answer. | 
+| Laptop / device issue | Pulls device info from JAMF and guides you through troubleshooting steps. | 
+| Slack group / channel request | Creates or modifies Slack channels and group memberships automatically. | 
+| Google group / email alias | Creates or updates Google groups and distribution lists. | 
+| Onboarding access setup | Provisions standard app access for new team members per role policy. | 
+Tracking your requests
+You can track requests in a few places, depending on when and how they were submitted:
+- Compass portal: All requests submitted via Compass (Slack or portal) are tracked here, with full status and history.
+- Slack threads: You’ll receive Slack DM notifications for ticket status changes, and you can reply directly in the thread to add context or follow up.
+Ticket statuses you may see
+Behind the scenes, your ticket may move through a few statuses as it’s worked: New, In Progress, Waiting on User (Compass or an agent is waiting on more information from you), Waiting on Other Team (the ticket has been handed to another team), and Done. You don’t need to manage these yourself. Compass and the responsible team keep the ticket moving, and you’ll be notified of updates in Slack.
+Tips for better results
+Compass’s AI works best when you give it clear, specific context. A little extra detail up front often means your request is resolved instantly, with no need to involve a human agent at all.
+| Instead of… | Try saying… | 
+|---|---|
+| “I need access” | “I need access to Figma for my design project. I’m on the Brand team.” | 
+| “It’s broken” | “My MacBook Pro won’t connect to VPN since I updated to macOS 15.” | 
+| “Question about policy” | “What is GitLab’s expense policy for home office equipment?” | 
+Frequently asked questions
+Do I need to install anything?
+No. Every GitLab team member is automatically provisioned as a Compass Member. The Compass app is added to your Slack automatically, and you authenticate with your existing @gitlab.com SSO account.
+Is Compass a GitLab-built tool?
+No. Compass is GitLab’s internal brand name for Serval, a third-party AI-native ITSM platform that GitLab has procured and licensed from an outside vendor. GitLab configures and administers the platform, but the underlying technology is built and maintained by Serval. You may see “Serval” in some URLs (app.serval.com) and vendor documentation.
+What if Compass gets my request wrong or can’t help?
+Compass will escalate to a human agent on the appropriate team automatically, and will pass along the full context of your request so you don’t have to repeat yourself.
+Glossary and getting help
+| Term | Meaning | 
+|---|---|
+| Serval | The third-party vendor and underlying AI-native ITSM platform that GitLab has procured; branded internally as “Compass.” | 
+| Compass | GitLab’s internal name for the Serval platform — the name you’ll see and use day to day. | 
+| Member | The default role every GitLab team member has in Compass, which lets you submit, browse, and track your own requests. | 
+| Workspace | A team-specific area in Compass (e.g., the IT Workspace) where that team’s tickets, workflows, and knowledge base live. | 
+| Guidance / Workflow | The instructions and automations that shape how Compass’s AI resolves specific types of requests, maintained by each team’s Agents, Contributors, and Builders. | 
+For questions about this guide, or to explore onboarding your team to Compass, post in Compass, or email us at it-help@gitlab.com.
+bee431b5)

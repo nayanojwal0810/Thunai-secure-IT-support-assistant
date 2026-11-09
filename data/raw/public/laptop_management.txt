@@ -1,0 +1,58 @@
+Title: GitLab Laptop Management
+Original URL: https://handbook.gitlab.com/handbook/eta/corporate-it/end-user-services/laptop-management/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+GitLab Laptop Management
+Introduction
+The EUS team oversees all laptop procurement and management. While certain aspects, such as endpoint management configurations, are supported by the CorpSec team, we generally act as the point of contact for all related issues.
+At GitLab, we use centralized laptop management for company issued devices. If you are in possession of a company issued device, the details below apply to you. However, not all endpoint management technologies GitLab deploys will be required for all devices. Some technologies may be specific to the hardware platform or operating system.
+We order laptops in bulk through our global vendors to ensure on time and consistent delivery experiences for all team members.
+We work through existing inventory before ordering new releases This means the newest model will not be immediately available when announced. There is no set timeline for when new models will be in stock - it will vary by region depending on the pace of new hires and device refreshes in each area.
+Laptop configurations vary by regional inventory availability. For example, some regions may have 2024 models in Space Gray while others have 2025 models in Silver.
+Note: In most cases, we will prioritize new hire laptop orders over refreshes. Refreshes may be delayed, depending on stock availability.
+Laptop Specs
+GitLab approves and supports the use of macOS and Linux for team member laptops. To keep GitLab IT Support efficient, Windows is not supported as a laptop OS.
+Further information on GitLab authorized operating systems, versions, and exception process is available on the internal Approved Operating Systems for GitLab Team Member Endpoint Systems page.
+Apple hardware is the standard choice for GitLab team members. Linux is available as an alternative for team members who prefer it, but is not encouraged due to limited support. Team members choosing Linux must be fully self-sufficient.
+Apple Hardware
+Our standard laptop offerings include:
+- MacBook Pro 14-inch - 24GB Unified memory / 1TB storage Standard model
+- MacBook Pro 16-inch - 64GB Unified memory / 1TB storage Performance model
+- MacBook Pro 14-inch - 64GB Unified memory / 1TB storage Performance model
+Most roles that require higher performance machines are approved for a 14" or 16" MacBook Pro performance model. Please see this spreadsheet (public) to determine which machine you are eligible for.
+Linux Hardware
+Linux is available as an alternative to macOS, but is not encouraged due to limited support. By choosing Linux, you accept full responsibility for maintaining your environment and understand that IT does not provide support. There is a #linux channel in Slack for exchanging tips and tricks, but it is not an official helpdesk resource.
+Dell is the only approved Linux laptop vendor. These laptops generally come pre-loaded with Ubuntu Linux. Dell does not sell laptops pre-installed with Linux in some countries; team members will need to install Linux themselves in those cases.
+The maximum price of Linux laptops is not to exceed the price of the equivalent 16" MacBook Pro laptop.
+Ubuntu LTS (latest version) is the only approved Linux distribution.
+Requirements
+- Fleet Enrollment: All Linux endpoints must have Fleet installed.
+- EDR Agent: CrowdStrike or SentinelOne is required (installed automatically via Fleet).
+  - SentinelOne: Netherlands, Germany, Italy, Austria, France.
+  - CrowdStrike: All other regions.
+- Full-Disk Encryption: LUKS encryption is required.
+- Self-Managed: You are responsible for maintaining your Linux environment, including security patching and version upgrades.
+EDR deployment is required on all team member endpoint systems, including virtual machines. Docker containers are excluded from MDM/EDR enrollment requirements.
+Windows for Customer Support and Product Development
+Windows cannot be used to access GitLab Corporate services (e.g. Slack, G-Suite, GitLab.com); Windows OS can only be used in addition to a GitLab managed device. We understand specific roles will need to use Windows to ensure platform and ecosystem support for GitLab customers and partners who develop for the Microsoft Ecosystem.
+The usage of virtualized Windows is highly preferred and should satisfy most support and development need. Complete details about Windows usage is available on the internal Approved Operating Systems for GitLab Team Member Endpoint Systems page.
+Laptop Management Policies
+In addition to specific hardware requirements, we also employ various policies and software solutions to ensure that all GitLab devices remain secure.
+Endpoint Management
+Fleet
+Fleet is an Open-Source remote management system that is required on all Macs and Dell devices in order to be able to access GitLab Corporate services. It allows us to remotely manage enrolled laptops to ensure security compliance, and perform tasks such as pushing updates, encrypting devices, and remotely locking and wiping machines.
+All new Macs purchased and shipped by GitLab vendors are automatically enrolled in Fleet. It may be necessary to manually enroll a Mac if it was self-procured. GitLab Corporate services should not be accessed from a Mac that is not enrolled in Fleet.
+Backblaze
+Backblaze is a tool that might be deployed to backup data on your company owned device in the event of a security or legal hold/investigation and only following a request of the Legal and People Ops teams, subject to local data, privacy and employment laws.
+Defense in depth, in part, means you make a best effort to be secure at each layer. To read through more instructions, please refer to security best practices when configuring your new laptop.
+Laptop Ordering
+Laptop Repairs
+Laptop Security Configuration Standards
+Laptop Vendor Information
+Laptop Wipe (Factory Reset) Process
+6fbd0c97)

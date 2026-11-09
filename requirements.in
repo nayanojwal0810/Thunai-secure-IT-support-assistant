@@ -3,3 +3,5 @@ uvicorn
 pydantic-settings
 httpx
 pytest
+requests
+trafilatura

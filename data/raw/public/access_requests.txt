@@ -1,0 +1,41 @@
+Title: Access Requests (AR) Services
+Original URL: https://handbook.gitlab.com/handbook/eta/corporate-it/end-user-services/access-requests/ar-services/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+Access Requests (AR) Services
+Access Requests are owned by the Corporate Security Helpdesk team. All onboarding, offboarding and role change (career mobility) requests are owned by the People Connect Team.
+If you have any access requests related questions, please contact IT via the Compass app in Slack (type “Compass” in the top search bar to find it) or it-help@gitlab.com.
+Issue Trackers
+- Team Members (use this by default): Access Request Issue Tracker
+- Temporary Service Providers: Lifecycle Issue Tracker
+- Employment Onboarding: Employment Issue Tracker
+- Employment Career Mobility: Employment Issue Tracker
+- Employment Offboarding: Employment Issue Tracker
+Team Member Issue Templates
+Please submit a team member access request by selecting the appropriate application-specific form here. If there isn’t a specific application request form for your needs (like Adobe, Slack, or Zoom), you can use the Individual or Bulk Person Access request.
+Role Based Entitlements
+- Role based entitlements are a pre-approved set of permissions that are granted to all people in a role. Make sure that whatever set of permissions you are adding to these templates should be granted to anyone with that role.
+- Role based entitlements need to be approved only once, when the template is created, and they don’t need to be approved again on a case-by-case basis.
+- These templates cannot be edited to remove or add extra permissions once created, unless those changes are approved by a manager (or higher) of the team the role belongs to. Note that an approval is still required even if a change comes from a manager or higher on a baseline entitlement template to mitigate the risk of a permission change being pushed through by a single team member.
+- We have decided to remove all SOX applications from the Role-Based Entitlements templates. Therefore, any access that is requested for our SOX-in-scope systems should follow the standard A/R process outlined here in our handbook. The impact to you is for any access going forward that was granted automatically via a role based entitlement will now need to be requested via a standard A/R so we can ensure approvals are properly captured.
+- Please note when editing an existing template or creating a new one do not include access of any kind to a rolebased access template. Full listing of SOX applications can be found here
+Need help?
+- Please mention @gitlab-com/business-technology/end-user-services in the issue, with no particular SLA.
+- If your request is urgent, post a link to your access request via the Compass app in Slack (type “Compass” in the top search bar to find it) or it-help@gitlab.com.
+Working on Access Requests
+Department Access Request Boards
+- If you need additional labels or have suggestions for improving the process until we can fully automate, please open an issue.
+- ARs are auto-assigned and auto-labeled when possible by department. In some cases, there are multiple provisioners per tool. If a template cannot be auto-assigned, Business Technology will provide a board where the provisioners can review their department’s issues by label (ie dept::to do. It is up to the department to manage the workflow on who works the issues to completion.
+- Moving an issue from one column to another will remove the first label (per the column header) and add the second label. Please use caution when moving issues between columns.
+- Departments can check their outstanding access request issues by viewing their board below.
+Tech Stack Changes
+If you need to initiate an Access Request process for a new item in the tech stack:
+- Confirm the tool is added to the tech stack
+- Confirm a team member is included as the provisioner deprovisioner
+- Document the requirement to submit an Access Request in any relevant handbook pages
+6ded52ed)

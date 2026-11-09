@@ -1,0 +1,69 @@
+Title: End User Services (EUS)
+Original URL: https://handbook.gitlab.com/handbook/eta/corporate-it/end-user-services/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+End User Services (EUS)
+The End User Services (EUS) team is the IT Helpdesk for GitLab. We provide internal IT support for the entire organisation, covering access management, hardware procurement and support, and application support for many of our most commonly used applications.
+How to Contact Us
+Email: it-help@gitlab.com
+Slack: Please contact IT via the Compass app in Slack (type “Compass” in the top search bar to find it).
+Courtesy reminder: our team members have scheduled on-call shifts, so please ask via Compass or email rather than sending Slack direct messages to specific individuals (unless it’s a sensitive matter). There is no need to tag any group or person — your request will be answered by the first available person.
+What We Do
+We have 24x5 coverage provided by Helpdesk Support Analysts who can help you with access requests, account lockouts, authentication issues, laptop hardware, laptop software configuration problems, 1:1 training for unfamiliar technologies, and triaging problems for any Corporate Security System.
+Corporate IT / EUS handles requests and enablement. Corporate Security Identity Engineering handles architecture, security controls, and identity provisioning automation.
+We own
+- Ad-hoc access requests and fulfilment
+- Access builds for Temporary Service Providers and External Collaborators
+- Account password and 2FA resets
+- Laptop procurement, repairs, and wipes
+- IT onboarding enablement and end user training
+- End user support for supported applications and Zoom
+CorpSec Devices owns mobile device management (MDM) and endpoint detection and response (EDR) configuration, endpoint security baselines, browser security controls, software update policy, and device-trust enforcement. EUS performs user support, logistics, and delegated routine device actions within those controls.
+CorpSec Identity Engineering owns
+- Okta system management and Okta authentication
+- Automated access request flows through Lumos (Identity Governance)
+- Provisioning architecture and orchestration
+- Onboarding and offboarding automation and overall design
+- Service Accounts
+For systems not managed by Corporate IT or Corporate Security, you can locate the owner in the tech stack. If you’re not sure where to ask, contact us and we will redirect you to the right person or place.
+Help Articles
+- Access Requests - including AR Services and FAQs
+- Account Password and 2FA Resets
+- External Collaborators (Customers, Partners, Vendors)
+- IT Onboarding 101
+- Laptop Management - including the Laptop Wipe (Factory Reset) Process
+- Okta End User Guide
+- Supported Applications
+- Temporary Service Providers (Contractor Users)
+- Compass - IT support request platform
+- Zoom
+Support Hours
+We provide support 24x5 to support standard working hours for our team members during the work week from Sunday 22:00 UTC to Friday 23:59 UTC. We do not provide support coverage on weekends.
+In the event of an emergency or urgent request, please contact IT via the Compass app in Slack (type “Compass” in the top search bar to find it) or it-help@gitlab.com.
+Courtesy Reminder: Our team members have scheduled on-call shifts, so we kindly ask that you ask in the channel and not send Slack direct messages to specific individuals (unless it’s for a sensitive matter). There is no need to tag any group or person in the slack app since your request will be responded to by the first available person. Please contact IT via the Compass app in Slack (type “Compass” in the top search bar to find it) or it-help@gitlab.com.
+Holiday Schedule
+- 2024-12-25 (Wednesday)
+- 2025-01-01 (Wednesday)
+On Call Schedule
+| Region | Analyst Name | Support Hours | Projects/Provisioning Hours | 
+|---|---|---|---|
+| JAPAC | Steve Ladgrove Australia Eastern (UTC+10) | 22:00 to 06:00 UTC 3:00pm to 11:00pm PT | 22:00 to 06:00 UTC 3:00pm to 11:00pm PT | 
+| JAPAC | Maximillian Hirata Japan (UTC+9) | 23:00 to 07:00 UTC 4:00pm to 12:00am PT | 23:00 to 07:00 UTC 4:00pm to 12:00am PT | 
+| EMEA | Bruno Ferreira Ireland (UTC+1) 07:00 to 11:00 UTC 11:00pm to 3:00am PT | 11:00 to 15:00 UTC 3:00am to 8:00am PT |  |  |  | 
+| EMEA | Eoghan Dunne Ireland (UTC+1) | 11:00 to 16:00 UTC 3:00am to 9:00am PT | 08:00 to 11:00 UTC 12:00am to 3:00am PT | 
+| AMER | Alex Krusiec AMER Pacific/Mountain (UTC-7) | 15:00 to 19:00 UTC 8:00am to 12:00pm PT | 19:00 to 23:00 UTC 12:00pm to 4:00pm PT | 
+| AMER | Mic Rohr AMER Central (UTC-5) | 16:00 to 21:00 UTC 5:00am to 10:00am PT | 21:00 to 23:59 UTC 10:00am to 1:00pm PT | 
+| AMER | Jeff Ford AMER Pacific/Mountain (UTC-7) | 17:00 to 22:00 UTC 10:00am to 3:00pm PT | 22:00 to 01:00 UTC 3:00pm to 6:00pm PT | 
+Access Requests (ARs)
+EUS - Supported Apps
+External Collaborators (Customers, Partners, Vendors)
+GitLab IT Onboarding 101
+GitLab Laptop Management
+Okta
+Temporary Service Provider Services (Contractor Users)
+6ded52ed)

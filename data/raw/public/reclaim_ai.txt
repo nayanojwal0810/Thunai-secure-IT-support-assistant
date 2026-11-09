@@ -1,0 +1,79 @@
+Title: Reclaim.ai
+Original URL: https://handbook.gitlab.com/handbook/eta/corporate-it/end-user-services/supported-apps/reclaim-ai/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+Reclaim.ai
+Reclaim.ai is an AI-powered calendar management and productivity tool that helps optimize scheduling and time management. The platform integrates with calendar systems to automatically schedule focus time, manage tasks, and optimize meeting schedules.
+Security and Compliance Requirements
+As a GitLab team member using Reclaim.ai, you are responsible for understanding and adhering to the following security controls and compliance requirements:
+Index
+Data Classification
+Reclaim.ai can process Orange data
+Ensure your use of Reclaim.ai aligns with GitLab’s data classification and handling policies. Do not include confidential customer information or other RED data.
+System of Record Maintenance
+Reclaim.ai can augment your calendar, but you’re still responsible!
+- GitLab’s primary calendar system (Google Calendar) remains the authoritative source for scheduling information
+- Reclaim.ai should be used as a productivity enhancement tool, not as the primary system of record
+- Regularly verify that information synchronized between Reclaim.ai and your primary calendar systems is accurate
+- Maintain backup copies of critical scheduling and task information outside of Reclaim.ai
+Manager Responsibilities
+If you’re a manager: make sure you’re involved
+- Managers must ensure their team members understand proper Reclaim.ai usage guidelines
+- Monitor and review how team members are using Reclaim.ai to ensure compliance with GitLab policies
+- Work with your team members to determine what types of information should and should not be managed through Reclaim.ai with the particular concerns of your business unit in mind
+- Regularly review team access and usage patterns
+Disaster Recovery and Business Continuity
+Users of Reclaim.ai should:
+- Maintain alternative scheduling and productivity workflows that do not depend solely on Reclaim.ai
+- Ensure critical meetings and tasks are also tracked in GitLab’s primary systems (Google Calendar, GitLab issues, etc.)
+Security Configuration Changes
+- IT EUS can approve security and configuration changes: any requests should go through the normal access request process
+- IT EUS should coordinate with the Security team before making significant configuration changes that affect data transmission
+- Anyone making a change should follow standard workflows for configuration changes for audit purposes
+Security Incident Reporting
+Immediate Actions Required
+If you suspect a security incident involving Reclaim.ai:
+- Immediately change your Reclaim.ai password and revoke any active sessions
+- Immediately notify the GitLab Security team via:
+  - Slack: #security-help channel
+  - Following the Security Incident Response procedure
+Types of Incidents to Report
+- Compromised Reclaim.ai user accounts
+- Unauthorized access to calendar or task data
+- Suspicious activity in your Reclaim.ai account
+- Potential data breaches or leaks
+- Compromised integration accounts or API keys
+- Any unusual system behavior that could indicate a security issue
+Information to Include in Reports
+- Date and time of the suspected incident
+- Description of what occurred or was observed
+- Affected accounts or data
+- Steps already taken to contain the incident
+- Any evidence or logs available
+Data Accuracy and Completeness
+Users of Reclaim.ai should:
+- Ensure all calendar entries are accurate and up-to-date
+- Verify that sensitive or confidential information is appropriately classified and protected
+- Review calendar sharing settings to ensure appropriate access levels
+- Regularly audit the information being synchronized between Reclaim.ai and other systems
+- Remove or update outdated or incorrect calendar information promptly
+- Be mindful of what information is being shared through Reclaim.ai’s AI features and recommendations
+Data Classification Guidelines
+- Public: General meeting titles and times that can be shared openly
+- Internal: GitLab-specific meetings and projects (default classification)
+- Confidential: Sensitive business information, personnel matters, or strategic discussions
+- Restricted: Highly sensitive information that should not be processed by external AI systems
+Additional Support
+For questions about Reclaim.ai usage, security concerns, or compliance requirements:
+- General IT Support: Please contact IT via the Compass app in Slack (type “Compass” in the top search bar to find it) or it-help@gitlab.com.
+- Security Questions: #security-help in Slack
+- Access Requests: Follow the Access Request process
+- Compliance Questions: Contact your manager or the Compliance team
+- Data Privacy Questions: Contact the Privacy team via #privacy in Slack
+For technical issues with Reclaim.ai itself, please contact Reclaim.ai support directly while keeping the GitLab IT team informed of any significant issues.
+8f22e33f)

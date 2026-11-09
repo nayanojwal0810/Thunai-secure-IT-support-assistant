@@ -1,0 +1,90 @@
+Title: GitLab IT Onboarding 101
+Original URL: https://handbook.gitlab.com/handbook/eta/corporate-it/end-user-services/onboarding101/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+GitLab IT Onboarding 101
+Welcome To GitLab
+Congratulations on joining GitLab! This page is dedicated to the IT onboarding experience, here at GitLab we use many applications and the latest hardware to enable you to complete your work to the best of your ability! While it may seem a little bit overwhelming at the start, we are here to make the process as easy as possible!
+IMPORTANT: You will not have access to your work Mac until your start date. On your start date, please follow this guide.
+Table of Contents
+- Activate Your Okta Account
+- Set up your computer:
+- Set Up Okta Verify on Mac
+- Google Account Setup
+- Access GitLab Email and GitLab.com
+Activate Your Okta Account
+You will receive an Okta activation email in your personal email. This is the first step to gaining access to GitLab’s systems.
+- On a mobile device, check your personal email for an Okta activation email.
+- Click the link in the email to set your password and configure Okta Verify on your mobile device.
+- After setting up your account, your browser will redirect to the Okta dashboard.
+IMPORTANT: Either Okta Verify or an enrolled FIDO2 key (like a YubiKey) is required to set up your GitLab-managed Mac. Make sure either is set up during your Okta account onboarding.
+Mac Setup
+IMPORTANT: If the Device Management screen does not show up during setup, please follow the manual enrollment steps to enroll your device in MDM.
+Keep your Mac plugged in and connected to a stable internet connection until setup is complete.
+- Power on your GitLab-managed Mac.
+- Select your country or region.
+- On the Transfer Your Data to This Mac screen, select Set up as new.
+- Choose accessibility options, or click Not Now.
+- Select your Wi-Fi network.
+- On the Device Management screen, wait for the enrollment profile to load, then click Enroll.
+- Sign in to Okta when prompted. Use the password you created during Okta account activation.
+- On the Verify it’s you with a security method screen, select either Get a push notification (Okta Verify) or Security Key or Biometric Authenticator (for example, a YubiKey), then complete the verification.
+- The Mac enrolls in MDM and installs required settings. When that finishes, setup moves on to account creation.
+- Set up your computer account. Your full name and username are automatically prefilled. Create a password for your local Mac account that meets the GitLab Password Standards. You can use the same password as your Okta password.
+- Choose your look: Light, Dark, or Auto.
+- Enable Location Services.
+- Set up Touch ID when prompted.
+- Once you land at the desktop, GitLab’s onboarding app (Exit0) opens the Set up your Mac window. Click Start setup, or wait 10 seconds for it to start on its own. It installs your core apps (Google Chrome, Slack, etc.), applies required settings, and verifies security compliance before use.
+- When the You’re all set! screen appears, setup is finished. If FileVault full disk encryption is already enabled, your Mac is ready to use. If FileVault is not enabled, you will be prompted to restart the Mac in order to enable it. Click Restart or wait for the 60-second countdown, then log back in with your local Mac account password.
+If setup stops or shows an error, email it-help@gitlab.com from your personal email address.
+Manual Mac Setup
+Manual enrollment is only for Macs that cannot use automated enrollment, such as a Mac that was not purchased through GitLab’s authorized vendors. Manually enrolling Macs should be a last resort and is not considered a standard process. If you live in a country where GitLab is not able to ship a Mac to you, email it-help@gitlab.com to confirm it’s the right option.
+Before you begin, make sure your Mac is running macOS 15 or later and you can sign in to it with an administrator account.
+- Email it-help@gitlab.com and ask for access to manual Mac enrollment. IT adds you to the Okta group for manual enrollment and lets you know when it’s done.
+- On your Mac, open Safari. Google Chrome isn’t installed yet.
+- Sign in to the Okta dashboard.
+- Click the Fleet macOS Manual Enrollment tile. It opens the Fleet enrollment page.
+- Sign in to Okta again when prompted.
+- On the How to turn on MDM on your Mac page, make sure Company-owned is selected, then click Download. If Safari asks to allow downloads, click Allow. When you see Profile Downloaded, click OK.
+- Choose Apple menu > System Settings, then select General > Device Management. Double-click the GitLab enrollment profile.
+- Click Install…, then click Install to confirm.
+- Wait a few minutes for GitLab’s onboarding app to open the Set up your Mac window. Keep your Mac plugged in and connected to the internet.
+From there, setup is the same as automated enrollment. Continue with the Set up your Mac and You’re all set! steps in Mac Setup, then set up Okta Verify.
+If enrollment fails, email it-help@gitlab.com.
+Linux Setup
+Follow the Linux Desktop OS Setup Guide to set up and enroll your Linux laptop.
+Set Up Okta Verify on Mac
+Okta Verify is installed automatically during Mac setup and is the primary way to authenticate to apps used at GitLab. The easiest way to set it up is to import the Okta Verify account from your mobile device.
+Before you begin:
+- Keep your mobile device near your Mac, with Bluetooth turned on for both.
+- Open Okta Verify on your mobile device and make sure your GitLab account shows no warnings or errors.
+- Open Okta Verify on your Mac.
+- On the Welcome to Okta Verify window, click Import account.
+- On your mobile device, open Okta Verify, tap your GitLab account, tap Export account, then tap Allow. Your mobile device shows a QR code and an 8-character code.
+- On your Mac, enter the 8-character code and click Continue. Okta ends the Bluetooth connection after 5 minutes, so start again if the code expires.
+- Your Mac shows a 6-digit PIN. Enter it in Okta Verify on your mobile device. Never enter a PIN that someone else gives you.
+- Enable Touch ID when prompted.
+If you don’t have Okta Verify on a mobile device, click Get started instead of Import account. Make sure the sign-in URL is gitlab.okta.com, click Next, and sign in with your Okta username, password, and security method.
+Google Account Setup
+- Open Google Chrome. On the Sign in to Chrome window, click Sign In.
+- Enter your GitLab email address and click Next.
+- Chrome opens the GitLab Okta sign-in. On the Verify it’s you with a security method screen, select Use Okta FastPass. On Linux, select Security Key or Biometric Authenticator instead.
+- The first time you sign in, Google shows the Google Workspace terms. Click Agree.
+- On the Google Verify it’s you screen, check that your GitLab email address is shown and click Continue.
+- On the This profile will be managed screen, click Continue.
+- If Chrome asks What would you like to do with your existing profile data?, select Create a new profile for work without my existing data and click Confirm.
+Access GitLab Email and GitLab.com
+- Access your GitLab email by clicking Google Workspace Mail from the Okta dashboard, or go to https://mail.google.com.
+- Check your GitLab email for an email titled “Welcome to GitLab Onboarding, yourname!”.
+- Follow the instructions in the email to set up your GitLab.com account and access your Onboarding Issue.
+Congratulations
+You have completed the initial setup process for your GitLab accounts and computer. If you encounter any issues, please contact IT via the Compass app in Slack (type “Compass” in the top search bar to find it) or it-help@gitlab.com.
+Need Help?
+If you need help setting up your Mac, email it-help@gitlab.com. If you can’t access your GitLab email yet, send it from your personal email address.
+GitLab Linux Onboarding 101
+6fbd0c97)

@@ -1,0 +1,206 @@
+Title: Incidents
+Original URL: https://handbook.gitlab.com/handbook/eta/css/incidents/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+Incidents
+This guide explains how Customer Support Systems handles incidents - problems that cannot be resolved within 10 minutes and require structured response procedures.
+The document covers our incident response framework, including how to determine incident severity, when and how to escalate, target resolution times, and post-incident review requirements. The process consists of 6-8 stages depending on severity, ensuring incidents are managed consistently from detection through resolution.
+Understanding incidents
+What are incidents
+For the purposes of the Customer Support Systems team, an incident is an event, problem, or error that cannot be quickly (within 10 minutes) resolved. This can stem from a bug, a system change, a user report, etc.
+Escalation levels
+In some situations, you will not be able to resolve an incident quickly enough and will need to escalate it. The current escalation levels are:
+| Level | Action | 
+|---|---|
+| 1 | Post in team channel asking for assistance | 
+| 2 | Page Customer Support Systems Specialist oncall | 
+| 3 | Page Fullstack Engineer, Customer Support Systems oncall | 
+| 4 | Page in Customer Support Systems leadership | 
+Note you technically start at a “level 0” when you begin working an incident (and go up from there as needed).
+If at any point you are escalating to a higher level and find the target unavailable, you should move to the next highest level.
+For information on paging the Customer Support Systems team or a specific person on the Customer Support Systems team, please see:
+Severity
+The severity of an incident is dependent on the highest criticality level and highest impact level. Using these, you can determine the severity level from the table below:
+|  | Impacts customers | Breaks workflows | Impaired workflows | Inconvenience | 
+|---|---|---|---|---|
+| Mission Critical | 1 | 1 | 2 | 2 | 
+| Business Critical | 1 | 2 | 2 | 3 | 
+| Business Operational | 2 | 2 | 3 | 4 | 
+| Administrative | 3 | 3 | 4 | 4 | 
+Resolution times
+The time we set to resolve incidents depends on their severity. This time also determine the time between each escalation.
+| Severity level | Target resolution time | When to escalate | 
+|---|---|---|
+| Severity 1 | 1-2 hours | 10 minutes without resolution | 
+| Severity 2 | 2-4 hours | 30 minutes without resolution | 
+| Severity 3 | 24-48 hours | 8 hours without resolution | 
+| Severity 4 | 48-72 hours | 24 hours without resolution | 
+Handling incidents
+Handling incidents can be broken into 6-8 stages. A simplified flow of what this looks like for each severity level can be seen below:
+Mission Critical items flowchart
+graph TD;
+  A--> B
+  B--> C
+  C--> D
+  D-->|Yes| F
+  D-->|No| E
+  E--> C
+  F--> G
+  G--> H
+  H--> I
+  I--> J
+  A(Create an incident issue)
+  B(Create an incident on incident.io)
+  C(Troubleshoot and work the issue for up to 10 minutes)
+  D{Was it able to be resolved?}
+  E(Escalate to the next level)
+  F(Resolve the incident on incident.io)
+  G(Notate the issue and close it as resolved)
+  H(Create an after incident review)
+  I(Share with relevant parties)
+  J(Process completed)
+Business Critical items flowchart
+graph TD;
+  A--> B
+  B--> C
+  C--> D
+  D-->|Yes| F
+  D-->|No| E
+  E--> C
+  F--> G
+  G--> H
+  H--> I
+  I--> J
+  A(Create an incident issue)
+  B(Create an incident on incident.io)
+  C(Troubleshoot and work the issue for up to 30 minutes)
+  D{Was it able to be resolved?}
+  E(Escalate to the next level)
+  F(Resolve the incident on incident.io)
+  G(Notate the issue and close it as resolved)
+  H(Create an after incident review)
+  I(Share with relevant parties)
+  J(Process completed)
+Business Operational items flowchart
+graph TD;
+  A--> B
+  B--> C
+  C--> D
+  D-->|Yes| F
+  D-->|No| E
+  E--> C
+  F--> G
+  G--> H
+  H--> |Yes| I
+  H-->|No| K
+  I--> J
+  J--> K
+  A(Create an incident issue)
+  B(Create an incident on incident.io)
+  C(Troubleshoot and work the issue for up to 8 hours)
+  D{Was it able to be resolved?}
+  E(Escalate to the next level)
+  F(Resolve the incident on incident.io)
+  G(Notate the issue and close it as resolved)
+  H{Does this require an after incident review?}
+  I(Create an after incident review)
+  J(Share with relevant parties)
+  K(Process completed)
+Administrative items flowchart
+graph TD;
+  A--> B
+  B--> C
+  C--> D
+  D-->|Yes| F
+  D-->|No| E
+  E--> C
+  F--> G
+  G--> H
+  H--> |Yes| I
+  H-->|No| K
+  I--> J
+  J--> K
+  A(Create an incident issue)
+  B(Create an incident on incident.io)
+  C(Troubleshoot and work the issue for up to 24 hours)
+  D{Was it able to be resolved?}
+  E(Escalate to the next level)
+  F(Resolve the incident on incident.io)
+  G(Notate the issue and close it as resolved)
+  H{Does this require an after incident review?}
+  I(Create an after incident review)
+  J(Share with relevant parties)
+  K(Process completed)
+Stage 1 - Determine severity
+When an incident occurs and you begin working it, the first thing you need to do is determine the highest severity level. This is done by reviewing all the systems and items impacted, reviewing their individual criticality levels and impact levels, and using the highest severity value. The highest severity level is always used, regardless of scope or quantity of items in lower levels.
+As a reminder, the levels hierarchy is:
+Severity 1 > Severity 2 > Severity 3 > Severity 4
+Once you know the highest severity level, move to Stage 2
+Stage 2 - Create an issue
+For all incidents, we should be creating an issue using the Incident issue template. The information you put in it initially does not need to be “complete”. It will often be a simplified title (such as “Zendesk Triggers broken”) and the error/problem itself that is occuring.
+Once the issue is created, move to Stage 3.
+Stage 3 - Create an incident in incident.io
+After the issue has been created, you need to publish an incident via incident.io (so it shows on our status page). To do this:
+- Navigate to Status pages
+- Click on the status page you want to make an incident on
+- Click Publish incident at the top-right
+- Fill out a meaningful Name
+- Set the Status of the incident
+  - Investigating: Report an incident
+    - This is normally what you would use as the starting point
+  - Identified: Problem has been determined and a fix is being made
+  - Monitoring: Fix is implemented and we are monitoring the situation
+  - Resolved: Everything is good to go
+- Set a meaningful Message for the incident
+  - You should include a link to your incident issue here
+- Set the level of impact on Affected components (the value needed depends on the impact of the incident)
+  - No impact: The incident does not impact this component
+  - Degraded performance: The component is working but at lower than standard performance levels
+  - Partial outage: Significant parts of the component are not working
+  - Full outage: The component is hard down
+- Click Review incident
+- Review all information for accuracy
+- Click Publish incident
+Once created, move to Stage 4
+Stage 4 - Troubleshoot the incident
+With that out of the way, you will work to resolve the problem. Make sure to make ample comments on the issue as you do.
+As you do, remember to provide periodic updates to the incident in incident.io. In general, you should ensure it is updated every hour (even if it is simply to indicate it is still being looked into).
+In some situations, you will not be able to resolve an incident quickly enough and will need to escalate it. The time between escalation levels is going to depend on the severity level of the incident (see Resolution times).
+As such, your current state is going to determine the next stage you move to:
+- If you are on a reasonably timed path to resolution, continue working the incident until it is resolved. Once you have resolved the cause of the incident, move to Stage 6
+- If you need to escalate to the next level, move to Stage 5
+Stage 5 - Escalate the incident
+In this stage, you are going to escalate the incident. To determine who to escalate the incident to, refer to the Escalation levels.
+Make sure to add a comment on the issue indicating you are escalating it (and the level it is being escalated to).
+Once you have escalated the incident to the next level (and the target has acknowledged it), the DRI of the incident changes to the target you escalated this to.
+The target of the escalation will then move back to Stage 4
+Stage 6 - Resolve the incident in incident.io
+With the incident itself resolved, you need to resolve it in incident.io. To do this:
+- Login to Incident.io (via Okta)
+- Navigate to Status pages
+- Click on the status page the incident is on
+- Click on the incident in question
+- Click the top-right status bar (says what the current status is)
+- Select the new Status (it should be Resolved)
+- Enter a meaningful message
+- Click Review update
+- Review all information for accuracy
+- Click Publish update
+With that done, move to Stage 7
+Stage 7 - Resolve the issue
+Here, you need to resolve the issue previously created. Make sure to add comments detailing what was done to fix the root cause of the incident.
+After making the comments, close out the issue.
+If any of the following criteria are met, move to Stage 8:
+- The highest severity level was Severity 1
+- The highest severity level was Severity 2
+- This required an escalation to level 3 or higher
+Stage 8 - After incident review
+For this, you will utilize the Customer Support Systems After Incident Reviews Google doc (internal only).
+Make a duplicate of the Template tab, and then fill it in completely. You can use previous documents as an example of what is needed.
+Once you have filled everything out, make a Slack post in the #customer_support_systems channel, making sure to CC Customer Support Systems leadership (by @ mentioning them).
+855f68ba)

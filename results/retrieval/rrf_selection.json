@@ -1,0 +1,32 @@
+{
+  "selected_dense_weight": 0.75,
+  "bm25_weight": 1.0,
+  "rrf_k": 60,
+  "candidate_k": 20,
+  "top_k": 5,
+  "selection_objective": "Maximize development Evidence Recall@5; tie-break by Evidence MRR@5, All Evidence Found@5, and smaller dense weight",
+  "tie_breaking_rules": [
+    "highest development Evidence Recall@5",
+    "highest development Evidence MRR@5",
+    "highest development All Evidence Found@5",
+    "smaller dense weight"
+  ],
+  "selection_split": "development",
+  "selection_statement": "Selection used development data only. Validation data was not consulted during model selection.",
+  "selected_dev_metrics": {
+    "source_hit_at_5": 0.9643,
+    "source_recall_at_5": 0.9464,
+    "source_mrr_at_5": 0.9167,
+    "all_sources_found_at_5": 0.9286,
+    "evidence_hit_at_5": 0.9107,
+    "evidence_recall_at_5": 0.8839,
+    "evidence_mrr_at_5": 0.8101,
+    "all_evidence_found_at_5": 0.8571,
+    "unauthorized_chunks": 0,
+    "p50_latency_ms": 81.2,
+    "p95_latency_ms": 169.65
+  },
+  "corpus_sha256": "37182a3c8d6a2f095d87b1102e1e6d6c1d8b3abca400fd91470ba98f9107c0ac",
+  "dev_file_sha256": "cddc663b8c5298d953fb8bb1e68ee6a3942f8c570ff9ec3c8467959fb4f59c50",
+  "commit_sha": "5a5cfb0ca3aebdd1a1242735f6fcaff4a22cc470"
+}

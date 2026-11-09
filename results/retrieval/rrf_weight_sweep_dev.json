@@ -1,0 +1,764 @@
+{
+  "experiment_name": "weighted_rrf_dense_weight_sweep",
+  "commit_sha": "5a5cfb0ca3aebdd1a1242735f6fcaff4a22cc470",
+  "corpus_sha256": "37182a3c8d6a2f095d87b1102e1e6d6c1d8b3abca400fd91470ba98f9107c0ac",
+  "dev_file_sha256": "cddc663b8c5298d953fb8bb1e68ee6a3942f8c570ff9ec3c8467959fb4f59c50",
+  "model_id": "BAAI/bge-small-en-v1.5",
+  "collection_name": "thunai_bge_small_v15",
+  "bm25_weight": 1.0,
+  "candidate_k": 20,
+  "rrf_k": 60,
+  "top_k": 5,
+  "tested_dense_weights": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "question_count": 72,
+  "answerable_count": 56,
+  "access_denied_count": 8,
+  "unanswerable_count": 8,
+  "per_weight_results": [
+    {
+      "dense_weight": 0.1,
+      "bm25_weight": 1.0,
+      "rrf_k": 60,
+      "candidate_k": 20,
+      "top_k": 5,
+      "question_count": 72,
+      "unauthorized_chunk_count": 0,
+      "forbidden_source_exposure_count": 0,
+      "integrity_passed": true,
+      "metrics": {
+        "source_hit_at_5": 0.9821,
+        "source_recall_at_5": 0.9643,
+        "source_mrr_at_5": 0.8884,
+        "all_sources_found_at_5": 0.9464,
+        "evidence_hit_at_5": 0.9107,
+        "evidence_recall_at_5": 0.8839,
+        "evidence_mrr_at_5": 0.8051,
+        "all_evidence_found_at_5": 0.8571,
+        "unauthorized_chunks": 0,
+        "p50_latency_ms": 58.28,
+        "p95_latency_ms": 116.17
+      },
+      "per_topic_evidence_metrics": {
+        "T01": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.6905
+        },
+        "T02": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.7857,
+          "evidence_mrr_at_5": 0.6667
+        },
+        "T03": {
+          "question_count": 7,
+          "evidence_recall_at_5": 1.0,
+          "evidence_mrr_at_5": 0.9286
+        },
+        "T04": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.6905
+        },
+        "T05": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 1.0
+        },
+        "T06": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7143
+        },
+        "T07": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.8571
+        },
+        "T08": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 0.8929
+        }
+      }
+    },
+    {
+      "dense_weight": 0.25,
+      "bm25_weight": 1.0,
+      "rrf_k": 60,
+      "candidate_k": 20,
+      "top_k": 5,
+      "question_count": 72,
+      "unauthorized_chunk_count": 0,
+      "forbidden_source_exposure_count": 0,
+      "integrity_passed": true,
+      "metrics": {
+        "source_hit_at_5": 0.9643,
+        "source_recall_at_5": 0.9464,
+        "source_mrr_at_5": 0.8899,
+        "all_sources_found_at_5": 0.9286,
+        "evidence_hit_at_5": 0.8929,
+        "evidence_recall_at_5": 0.8661,
+        "evidence_mrr_at_5": 0.7946,
+        "all_evidence_found_at_5": 0.8393,
+        "unauthorized_chunks": 0,
+        "p50_latency_ms": 50.29,
+        "p95_latency_ms": 80.58
+      },
+      "per_topic_evidence_metrics": {
+        "T01": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.6905
+        },
+        "T02": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.7857,
+          "evidence_mrr_at_5": 0.6667
+        },
+        "T03": {
+          "question_count": 7,
+          "evidence_recall_at_5": 1.0,
+          "evidence_mrr_at_5": 0.9286
+        },
+        "T04": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.6429
+        },
+        "T05": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 1.0
+        },
+        "T06": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7143
+        },
+        "T07": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.8571
+        },
+        "T08": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.7857,
+          "evidence_mrr_at_5": 0.8571
+        }
+      }
+    },
+    {
+      "dense_weight": 0.5,
+      "bm25_weight": 1.0,
+      "rrf_k": 60,
+      "candidate_k": 20,
+      "top_k": 5,
+      "question_count": 72,
+      "unauthorized_chunk_count": 0,
+      "forbidden_source_exposure_count": 0,
+      "integrity_passed": true,
+      "metrics": {
+        "source_hit_at_5": 0.9643,
+        "source_recall_at_5": 0.9464,
+        "source_mrr_at_5": 0.8988,
+        "all_sources_found_at_5": 0.9286,
+        "evidence_hit_at_5": 0.9107,
+        "evidence_recall_at_5": 0.872,
+        "evidence_mrr_at_5": 0.8012,
+        "all_evidence_found_at_5": 0.8393,
+        "unauthorized_chunks": 0,
+        "p50_latency_ms": 45.76,
+        "p95_latency_ms": 68.37
+      },
+      "per_topic_evidence_metrics": {
+        "T01": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9048,
+          "evidence_mrr_at_5": 0.6714
+        },
+        "T02": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.7857,
+          "evidence_mrr_at_5": 0.6667
+        },
+        "T03": {
+          "question_count": 7,
+          "evidence_recall_at_5": 1.0,
+          "evidence_mrr_at_5": 0.9286
+        },
+        "T04": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7143
+        },
+        "T05": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 1.0
+        },
+        "T06": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7143
+        },
+        "T07": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.8571
+        },
+        "T08": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.7857,
+          "evidence_mrr_at_5": 0.8571
+        }
+      }
+    },
+    {
+      "dense_weight": 0.75,
+      "bm25_weight": 1.0,
+      "rrf_k": 60,
+      "candidate_k": 20,
+      "top_k": 5,
+      "question_count": 72,
+      "unauthorized_chunk_count": 0,
+      "forbidden_source_exposure_count": 0,
+      "integrity_passed": true,
+      "metrics": {
+        "source_hit_at_5": 0.9643,
+        "source_recall_at_5": 0.9464,
+        "source_mrr_at_5": 0.9167,
+        "all_sources_found_at_5": 0.9286,
+        "evidence_hit_at_5": 0.9107,
+        "evidence_recall_at_5": 0.8839,
+        "evidence_mrr_at_5": 0.8101,
+        "all_evidence_found_at_5": 0.8571,
+        "unauthorized_chunks": 0,
+        "p50_latency_ms": 81.2,
+        "p95_latency_ms": 169.65
+      },
+      "per_topic_evidence_metrics": {
+        "T01": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.6429
+        },
+        "T02": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 0.6952
+        },
+        "T03": {
+          "question_count": 7,
+          "evidence_recall_at_5": 1.0,
+          "evidence_mrr_at_5": 0.9286
+        },
+        "T04": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7143
+        },
+        "T05": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 1.0
+        },
+        "T06": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7857
+        },
+        "T07": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.8571
+        },
+        "T08": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.7857,
+          "evidence_mrr_at_5": 0.8571
+        }
+      }
+    },
+    {
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60,
+      "candidate_k": 20,
+      "top_k": 5,
+      "question_count": 72,
+      "unauthorized_chunk_count": 0,
+      "forbidden_source_exposure_count": 0,
+      "integrity_passed": true,
+      "metrics": {
+        "source_hit_at_5": 0.9643,
+        "source_recall_at_5": 0.9464,
+        "source_mrr_at_5": 0.9167,
+        "all_sources_found_at_5": 0.9286,
+        "evidence_hit_at_5": 0.9107,
+        "evidence_recall_at_5": 0.8839,
+        "evidence_mrr_at_5": 0.8018,
+        "all_evidence_found_at_5": 0.8571,
+        "unauthorized_chunks": 0,
+        "p50_latency_ms": 57.25,
+        "p95_latency_ms": 97.16
+      },
+      "per_topic_evidence_metrics": {
+        "T01": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.619
+        },
+        "T02": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 0.6952
+        },
+        "T03": {
+          "question_count": 7,
+          "evidence_recall_at_5": 1.0,
+          "evidence_mrr_at_5": 0.9286
+        },
+        "T04": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.6714
+        },
+        "T05": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 1.0
+        },
+        "T06": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.8571
+        },
+        "T07": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7857
+        },
+        "T08": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.7857,
+          "evidence_mrr_at_5": 0.8571
+        }
+      }
+    },
+    {
+      "dense_weight": 1.25,
+      "bm25_weight": 1.0,
+      "rrf_k": 60,
+      "candidate_k": 20,
+      "top_k": 5,
+      "question_count": 72,
+      "unauthorized_chunk_count": 0,
+      "forbidden_source_exposure_count": 0,
+      "integrity_passed": true,
+      "metrics": {
+        "source_hit_at_5": 0.9643,
+        "source_recall_at_5": 0.9464,
+        "source_mrr_at_5": 0.9077,
+        "all_sources_found_at_5": 0.9286,
+        "evidence_hit_at_5": 0.9107,
+        "evidence_recall_at_5": 0.8839,
+        "evidence_mrr_at_5": 0.7929,
+        "all_evidence_found_at_5": 0.8571,
+        "unauthorized_chunks": 0,
+        "p50_latency_ms": 51.83,
+        "p95_latency_ms": 90.01
+      },
+      "per_topic_evidence_metrics": {
+        "T01": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.5952
+        },
+        "T02": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 0.6476
+        },
+        "T03": {
+          "question_count": 7,
+          "evidence_recall_at_5": 1.0,
+          "evidence_mrr_at_5": 0.9286
+        },
+        "T04": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.6714
+        },
+        "T05": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 1.0
+        },
+        "T06": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.8571
+        },
+        "T07": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7857
+        },
+        "T08": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.7857,
+          "evidence_mrr_at_5": 0.8571
+        }
+      }
+    },
+    {
+      "dense_weight": 1.5,
+      "bm25_weight": 1.0,
+      "rrf_k": 60,
+      "candidate_k": 20,
+      "top_k": 5,
+      "question_count": 72,
+      "unauthorized_chunk_count": 0,
+      "forbidden_source_exposure_count": 0,
+      "integrity_passed": true,
+      "metrics": {
+        "source_hit_at_5": 0.9643,
+        "source_recall_at_5": 0.9464,
+        "source_mrr_at_5": 0.8988,
+        "all_sources_found_at_5": 0.9286,
+        "evidence_hit_at_5": 0.9107,
+        "evidence_recall_at_5": 0.8839,
+        "evidence_mrr_at_5": 0.7839,
+        "all_evidence_found_at_5": 0.8571,
+        "unauthorized_chunks": 0,
+        "p50_latency_ms": 48.79,
+        "p95_latency_ms": 143.18
+      },
+      "per_topic_evidence_metrics": {
+        "T01": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.5952
+        },
+        "T02": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 0.6476
+        },
+        "T03": {
+          "question_count": 7,
+          "evidence_recall_at_5": 1.0,
+          "evidence_mrr_at_5": 0.9286
+        },
+        "T04": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.6714
+        },
+        "T05": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.9286,
+          "evidence_mrr_at_5": 1.0
+        },
+        "T06": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7857
+        },
+        "T07": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.8571,
+          "evidence_mrr_at_5": 0.7857
+        },
+        "T08": {
+          "question_count": 7,
+          "evidence_recall_at_5": 0.7857,
+          "evidence_mrr_at_5": 0.8571
+        }
+      }
+    }
+  ],
+  "failure_analysis": [
+    {
+      "question_id": "T01-DEV-007",
+      "topic": "T01",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "bm25_retrieved_chunk_ids": [
+        "password_guidelines_0007",
+        "end_user_services_0001",
+        "password_guidelines_0013",
+        "end_user_services_0002",
+        "acceptable_use_policy_0014"
+      ],
+      "bge_retrieved_chunk_ids": [
+        "password_guidelines_0008",
+        "password_guidelines_0013",
+        "end_user_services_0002",
+        "okta_faq_0007",
+        "okta_guide_0003"
+      ],
+      "original_hybrid_retrieved_chunk_ids": [
+        "password_guidelines_0013",
+        "end_user_services_0002",
+        "password_guidelines_0007",
+        "password_guidelines_0008",
+        "okta_faq_0007"
+      ],
+      "selected_hybrid_retrieved_chunk_ids": [
+        "password_guidelines_0013",
+        "password_guidelines_0007",
+        "end_user_services_0002",
+        "password_guidelines_0008",
+        "okta_faq_0007"
+      ],
+      "gold_evidence_in_bm25_top20": true,
+      "gold_evidence_in_bge_top20": false,
+      "failure_cause": "missing_candidates",
+      "selected_weight_changes_top5_evidence_coverage": false,
+      "explanation": "Question T01-DEV-007 regression: BM25 had gold evidence in top 20, but BGE top 20 missed gold evidence, causing dense candidate omission."
+    },
+    {
+      "question_id": "T04-DEV-005",
+      "topic": "T04",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "bm25_retrieved_chunk_ids": [
+        "acceptable_use_policy_0002",
+        "laptop_security_0000",
+        "laptop_management_0003",
+        "remote_device_management_0000",
+        "laptop_management_0002"
+      ],
+      "bge_retrieved_chunk_ids": [
+        "laptop_security_0000",
+        "laptop_management_0003",
+        "laptop_management_0000",
+        "acceptable_use_policy_0002",
+        "remote_device_management_0000"
+      ],
+      "original_hybrid_retrieved_chunk_ids": [
+        "laptop_security_0000",
+        "acceptable_use_policy_0002",
+        "laptop_management_0003",
+        "remote_device_management_0000",
+        "laptop_management_0000"
+      ],
+      "selected_hybrid_retrieved_chunk_ids": [
+        "laptop_security_0000",
+        "acceptable_use_policy_0002",
+        "laptop_management_0003",
+        "remote_device_management_0000",
+        "laptop_management_0000"
+      ],
+      "gold_evidence_in_bm25_top20": true,
+      "gold_evidence_in_bge_top20": false,
+      "failure_cause": "missing_candidates",
+      "selected_weight_changes_top5_evidence_coverage": false,
+      "explanation": "Question T04-DEV-005 regression: BM25 had gold evidence in top 20, but BGE top 20 missed gold evidence, causing dense candidate omission."
+    },
+    {
+      "question_id": "T07-DEV-002",
+      "topic": "T07",
+      "question_type": "fact",
+      "user_role": "employee",
+      "bm25_retrieved_chunk_ids": [
+        "laptop_security_0001",
+        "laptop_personal_use_0001",
+        "acceptable_use_policy_0000",
+        "acceptable_use_policy_0013",
+        "laptop_personal_use_0000"
+      ],
+      "bge_retrieved_chunk_ids": [
+        "laptop_personal_use_0000",
+        "acceptable_use_policy_0001",
+        "remote_device_management_0000",
+        "laptop_security_0001",
+        "laptop_security_0000"
+      ],
+      "original_hybrid_retrieved_chunk_ids": [
+        "laptop_security_0001",
+        "laptop_personal_use_0000",
+        "acceptable_use_policy_0001",
+        "acceptable_use_policy_0013",
+        "acceptable_use_policy_0011"
+      ],
+      "selected_hybrid_retrieved_chunk_ids": [
+        "laptop_security_0001",
+        "laptop_personal_use_0000",
+        "acceptable_use_policy_0013",
+        "acceptable_use_policy_0001",
+        "acceptable_use_policy_0011"
+      ],
+      "gold_evidence_in_bm25_top20": true,
+      "gold_evidence_in_bge_top20": false,
+      "failure_cause": "missing_candidates",
+      "selected_weight_changes_top5_evidence_coverage": false,
+      "explanation": "Question T07-DEV-002 regression: BM25 had gold evidence in top 20, but BGE top 20 missed gold evidence, causing dense candidate omission."
+    },
+    {
+      "question_id": "T08-DEV-002",
+      "topic": "T08",
+      "question_type": "fact",
+      "user_role": "employee",
+      "bm25_retrieved_chunk_ids": [
+        "incident_paging_0004",
+        "infrastructure_incidents_0035",
+        "support_system_incidents_0000",
+        "acceptable_use_policy_0014",
+        "support_system_incidents_0010"
+      ],
+      "bge_retrieved_chunk_ids": [
+        "incident_response_0000",
+        "incident_paging_0002",
+        "infrastructure_incidents_0000",
+        "infrastructure_incidents_0013",
+        "incident_response_0001"
+      ],
+      "original_hybrid_retrieved_chunk_ids": [
+        "incident_paging_0002",
+        "infrastructure_incidents_0035",
+        "infrastructure_incidents_0036",
+        "infrastructure_incidents_0038",
+        "acceptable_use_policy_0004"
+      ],
+      "selected_hybrid_retrieved_chunk_ids": [
+        "infrastructure_incidents_0035",
+        "incident_paging_0002",
+        "infrastructure_incidents_0036",
+        "infrastructure_incidents_0038",
+        "acceptable_use_policy_0004"
+      ],
+      "gold_evidence_in_bm25_top20": true,
+      "gold_evidence_in_bge_top20": false,
+      "failure_cause": "missing_candidates",
+      "selected_weight_changes_top5_evidence_coverage": false,
+      "explanation": "Question T08-DEV-002 regression: BM25 had gold evidence in top 20, but BGE top 20 missed gold evidence, causing dense candidate omission."
+    },
+    {
+      "question_id": "T08-DEV-007",
+      "topic": "T08",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "bm25_retrieved_chunk_ids": [
+        "incident_response_0001",
+        "infrastructure_incidents_0002",
+        "infrastructure_incidents_0001",
+        "infrastructure_incidents_0012",
+        "end_user_services_0000"
+      ],
+      "bge_retrieved_chunk_ids": [
+        "incident_response_0001",
+        "infrastructure_incidents_0030",
+        "infrastructure_incidents_0000",
+        "incident_response_0000",
+        "infrastructure_incidents_0007"
+      ],
+      "original_hybrid_retrieved_chunk_ids": [
+        "incident_response_0001",
+        "infrastructure_incidents_0000",
+        "infrastructure_incidents_0001",
+        "infrastructure_incidents_0030",
+        "incident_response_0000"
+      ],
+      "selected_hybrid_retrieved_chunk_ids": [
+        "incident_response_0001",
+        "infrastructure_incidents_0000",
+        "infrastructure_incidents_0001",
+        "infrastructure_incidents_0030",
+        "infrastructure_incidents_0042"
+      ],
+      "gold_evidence_in_bm25_top20": true,
+      "gold_evidence_in_bge_top20": false,
+      "failure_cause": "missing_candidates",
+      "selected_weight_changes_top5_evidence_coverage": false,
+      "explanation": "Question T08-DEV-007 regression: BM25 had gold evidence in top 20, but BGE top 20 missed gold evidence, causing dense candidate omission."
+    },
+    {
+      "question_id": "T02-DEV-002",
+      "topic": "T02",
+      "question_type": "fact",
+      "user_role": "employee",
+      "bm25_retrieved_chunk_ids": [
+        "password_standard_0004",
+        "okta_guide_0000",
+        "password_guidelines_0014",
+        "okta_guide_0001",
+        "password_standard_0007"
+      ],
+      "bge_retrieved_chunk_ids": [
+        "password_standard_0007",
+        "okta_guide_0002",
+        "okta_guide_0000",
+        "okta_guide_0001",
+        "password_standard_0004"
+      ],
+      "original_hybrid_retrieved_chunk_ids": [
+        "okta_guide_0000",
+        "password_standard_0004",
+        "password_standard_0007",
+        "okta_guide_0001",
+        "okta_guide_0002"
+      ],
+      "selected_hybrid_retrieved_chunk_ids": [
+        "okta_guide_0000",
+        "password_standard_0004",
+        "password_standard_0007",
+        "okta_guide_0001",
+        "okta_guide_0002"
+      ],
+      "gold_evidence_in_bm25_top20": true,
+      "gold_evidence_in_bge_top20": true,
+      "failure_cause": "n/a - improvement",
+      "selected_weight_changes_top5_evidence_coverage": false,
+      "explanation": "Question T02-DEV-002 is a hybrid improvement over BM25. BGE ranked gold evidence chunks in top 20, allowing RRF to surface evidence."
+    },
+    {
+      "question_id": "T04-DEV-004",
+      "topic": "T04",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "bm25_retrieved_chunk_ids": [
+        "acceptable_use_policy_0015",
+        "laptop_ordering_0003",
+        "access_requests_0003",
+        "laptop_ordering_0002",
+        "laptop_ordering_0004"
+      ],
+      "bge_retrieved_chunk_ids": [
+        "laptop_repairs_0000",
+        "laptop_ordering_0007",
+        "infrastructure_incidents_0027",
+        "acceptable_use_policy_0015",
+        "laptop_ordering_0005"
+      ],
+      "original_hybrid_retrieved_chunk_ids": [
+        "acceptable_use_policy_0015",
+        "laptop_repairs_0000",
+        "laptop_ordering_0007",
+        "infrastructure_incidents_0027",
+        "laptop_ordering_0002"
+      ],
+      "selected_hybrid_retrieved_chunk_ids": [
+        "acceptable_use_policy_0015",
+        "laptop_repairs_0000",
+        "laptop_ordering_0007",
+        "infrastructure_incidents_0027",
+        "laptop_ordering_0002"
+      ],
+      "gold_evidence_in_bm25_top20": true,
+      "gold_evidence_in_bge_top20": true,
+      "failure_cause": "n/a - improvement",
+      "selected_weight_changes_top5_evidence_coverage": false,
+      "explanation": "Question T04-DEV-004 is a hybrid improvement over BM25. BGE ranked gold evidence chunks in top 20, allowing RRF to surface evidence."
+    }
+  ]
+}

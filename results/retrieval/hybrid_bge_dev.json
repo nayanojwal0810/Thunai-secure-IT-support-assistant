@@ -1,0 +1,2312 @@
+{
+  "method": "hybrid_rrf",
+  "dense_model_alias": "bge",
+  "dense_model_id": "BAAI/bge-small-en-v1.5",
+  "collection_name": "thunai_bge_small_v15",
+  "split": "development",
+  "top_k": 5,
+  "candidate_k": 20,
+  "rrf_k": 60,
+  "bm25_weight": 1.0,
+  "dense_weight": 1.0,
+  "chunk_count": 237,
+  "corpus_sha256": "37182a3c8d6a2f095d87b1102e1e6d6c1d8b3abca400fd91470ba98f9107c0ac",
+  "answerable_count": 56,
+  "access_denied_count": 8,
+  "unanswerable_count": 8,
+  "metrics": {
+    "source_hit_at_5": 0.9643,
+    "source_recall_at_5": 0.9464,
+    "source_mrr_at_5": 0.9167,
+    "all_sources_found_at_5": 0.9286,
+    "evidence_hit_at_5": 0.9107,
+    "evidence_recall_at_5": 0.8839,
+    "evidence_mrr_at_5": 0.8018,
+    "all_evidence_found_at_5": 0.8571,
+    "unauthorized_chunks": 0,
+    "p50_latency_ms": 116.77,
+    "p95_latency_ms": 481.31
+  },
+  "per_question": [
+    {
+      "question_id": "T01-DEV-001",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "password_standard_0000",
+        "password_guidelines_0000",
+        "password_standard_0001",
+        "password_standard_0002",
+        "password_standard_0003"
+      ],
+      "retrieved_source_ids": [
+        "password_standard",
+        "password_guidelines",
+        "password_standard",
+        "password_standard",
+        "password_standard"
+      ],
+      "gold_source_ids": [
+        "password_standard"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.3333333333333333,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 167.3431
+    },
+    {
+      "question_id": "T01-DEV-002",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "password_guidelines_0004",
+        "password_guidelines_0000",
+        "password_guidelines_0018",
+        "password_guidelines_0008",
+        "password_guidelines_0007"
+      ],
+      "retrieved_source_ids": [
+        "password_guidelines",
+        "password_guidelines",
+        "password_guidelines",
+        "password_guidelines",
+        "password_guidelines"
+      ],
+      "gold_source_ids": [
+        "password_guidelines"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.5,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 151.8563
+    },
+    {
+      "question_id": "T01-DEV-003",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "end_user_services_0000",
+        "end_user_services_0002",
+        "corporate_security_support_0002",
+        "corporate_security_support_0000",
+        "compass_user_guide_0000"
+      ],
+      "retrieved_source_ids": [
+        "end_user_services",
+        "end_user_services",
+        "corporate_security_support",
+        "corporate_security_support",
+        "compass_user_guide"
+      ],
+      "gold_source_ids": [
+        "end_user_services"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 246.0395
+    },
+    {
+      "question_id": "T01-DEV-004",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "password_guidelines_0001",
+        "password_guidelines_0002",
+        "password_guidelines_0007",
+        "password_guidelines_0004",
+        "password_guidelines_0005"
+      ],
+      "retrieved_source_ids": [
+        "password_guidelines",
+        "password_guidelines",
+        "password_guidelines",
+        "password_guidelines",
+        "password_guidelines"
+      ],
+      "gold_source_ids": [
+        "password_guidelines"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 174.2734
+    },
+    {
+      "question_id": "T01-DEV-005",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_guide_0002",
+        "it_onboarding_0000",
+        "okta_guide_0001",
+        "it_onboarding_0007",
+        "it_onboarding_0001"
+      ],
+      "retrieved_source_ids": [
+        "okta_guide",
+        "it_onboarding",
+        "okta_guide",
+        "it_onboarding",
+        "it_onboarding"
+      ],
+      "gold_source_ids": [
+        "it_onboarding"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 0.5,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.5,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 211.7319
+    },
+    {
+      "question_id": "T01-DEV-006",
+      "question_type": "comparison",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "end_user_services_0000",
+        "end_user_services_0001",
+        "corporate_security_support_0000",
+        "okta_guide_0000",
+        "corporate_systems_0000"
+      ],
+      "retrieved_source_ids": [
+        "end_user_services",
+        "end_user_services",
+        "corporate_security_support",
+        "okta_guide",
+        "corporate_systems"
+      ],
+      "gold_source_ids": [
+        "end_user_services"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 302.197
+    },
+    {
+      "question_id": "T01-DEV-007",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "password_guidelines_0013",
+        "end_user_services_0002",
+        "password_guidelines_0007",
+        "password_guidelines_0008",
+        "okta_faq_0007"
+      ],
+      "retrieved_source_ids": [
+        "password_guidelines",
+        "end_user_services",
+        "password_guidelines",
+        "password_guidelines",
+        "okta_faq"
+      ],
+      "gold_source_ids": [
+        "end_user_services",
+        "password_guidelines"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 0.0,
+      "evidence_recall": 0.0,
+      "evidence_rr": 0.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 0.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 357.7924
+    },
+    {
+      "question_id": "T01-DEV-008",
+      "question_type": "access_denied",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_faq_0010",
+        "okta_faq_0008",
+        "okta_faq_0009",
+        "acceptable_use_policy_0011",
+        "password_standard_0003"
+      ],
+      "retrieved_source_ids": [
+        "okta_faq",
+        "okta_faq",
+        "okta_faq",
+        "acceptable_use_policy",
+        "password_standard"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 76.6846
+    },
+    {
+      "question_id": "T01-DEV-009",
+      "question_type": "unanswerable",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "password_guidelines_0018",
+        "password_guidelines_0014",
+        "password_guidelines_0013",
+        "password_guidelines_0019",
+        "password_guidelines_0010"
+      ],
+      "retrieved_source_ids": [
+        "password_guidelines",
+        "password_guidelines",
+        "password_guidelines",
+        "password_guidelines",
+        "password_guidelines"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 79.7541
+    },
+    {
+      "question_id": "T02-DEV-001",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_faq_0000",
+        "okta_faq_0001",
+        "password_standard_0007",
+        "password_guidelines_0014",
+        "okta_faq_0014"
+      ],
+      "retrieved_source_ids": [
+        "okta_faq",
+        "okta_faq",
+        "password_standard",
+        "password_guidelines",
+        "okta_faq"
+      ],
+      "gold_source_ids": [
+        "okta_faq"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 139.7637
+    },
+    {
+      "question_id": "T02-DEV-002",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_guide_0000",
+        "password_standard_0004",
+        "password_standard_0007",
+        "okta_guide_0001",
+        "okta_guide_0002"
+      ],
+      "retrieved_source_ids": [
+        "okta_guide",
+        "password_standard",
+        "password_standard",
+        "okta_guide",
+        "okta_guide"
+      ],
+      "gold_source_ids": [
+        "okta_guide"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.2,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 112.3988
+    },
+    {
+      "question_id": "T02-DEV-003",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_faq_0000",
+        "okta_guide_0002",
+        "it_onboarding_0000",
+        "okta_guide_0001",
+        "okta_faq_0014"
+      ],
+      "retrieved_source_ids": [
+        "okta_faq",
+        "okta_guide",
+        "it_onboarding",
+        "okta_guide",
+        "okta_faq"
+      ],
+      "gold_source_ids": [
+        "okta_faq"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 308.3806
+    },
+    {
+      "question_id": "T02-DEV-004",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_faq_0003",
+        "okta_faq_0004",
+        "okta_faq_0001",
+        "okta_guide_0000",
+        "okta_faq_0000"
+      ],
+      "retrieved_source_ids": [
+        "okta_faq",
+        "okta_faq",
+        "okta_faq",
+        "okta_guide",
+        "okta_faq"
+      ],
+      "gold_source_ids": [
+        "okta_faq"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.3333333333333333,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 215.7231
+    },
+    {
+      "question_id": "T02-DEV-005",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_guide_0002",
+        "okta_guide_0003",
+        "okta_faq_0000",
+        "okta_faq_0007",
+        "okta_guide_0001"
+      ],
+      "retrieved_source_ids": [
+        "okta_guide",
+        "okta_guide",
+        "okta_faq",
+        "okta_faq",
+        "okta_guide"
+      ],
+      "gold_source_ids": [
+        "okta_guide"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 311.3654
+    },
+    {
+      "question_id": "T02-DEV-006",
+      "question_type": "comparison",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_faq_0009",
+        "okta_faq_0008",
+        "okta_faq_0006",
+        "okta_faq_0005",
+        "okta_guide_0000"
+      ],
+      "retrieved_source_ids": [
+        "okta_faq",
+        "okta_faq",
+        "okta_faq",
+        "okta_faq",
+        "okta_guide"
+      ],
+      "gold_source_ids": [
+        "okta_faq"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.3333333333333333,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 754.1792
+    },
+    {
+      "question_id": "T02-DEV-007",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_guide_0002",
+        "it_onboarding_0000",
+        "okta_guide_0001",
+        "okta_guide_0003",
+        "it_onboarding_0001"
+      ],
+      "retrieved_source_ids": [
+        "okta_guide",
+        "it_onboarding",
+        "okta_guide",
+        "okta_guide",
+        "it_onboarding"
+      ],
+      "gold_source_ids": [
+        "okta_faq",
+        "okta_guide"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 0.5,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 0.5,
+      "evidence_rr": 1.0,
+      "all_sources_found": 0.0,
+      "all_evidence_found": 0.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 176.3022
+    },
+    {
+      "question_id": "T02-DEV-008",
+      "question_type": "access_denied",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "password_standard_0003",
+        "infrastructure_incidents_0002",
+        "remote_device_management_0002",
+        "incident_paging_0002",
+        "support_system_incidents_0004"
+      ],
+      "retrieved_source_ids": [
+        "password_standard",
+        "infrastructure_incidents",
+        "remote_device_management",
+        "incident_paging",
+        "support_system_incidents"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 118.7704
+    },
+    {
+      "question_id": "T02-DEV-009",
+      "question_type": "unanswerable",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "infrastructure_incidents_0014",
+        "okta_faq_0010",
+        "password_guidelines_0016",
+        "it_onboarding_0000",
+        "password_guidelines_0005"
+      ],
+      "retrieved_source_ids": [
+        "infrastructure_incidents",
+        "okta_faq",
+        "password_guidelines",
+        "it_onboarding",
+        "password_guidelines"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 260.7165
+    },
+    {
+      "question_id": "T03-DEV-001",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "wireless_networks_0001",
+        "laptop_firewalls_0000",
+        "wireless_networks_0000",
+        "laptop_firewalls_0001",
+        "acceptable_use_policy_0008"
+      ],
+      "retrieved_source_ids": [
+        "wireless_networks",
+        "laptop_firewalls",
+        "wireless_networks",
+        "laptop_firewalls",
+        "acceptable_use_policy"
+      ],
+      "gold_source_ids": [
+        "wireless_networks"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 561.358
+    },
+    {
+      "question_id": "T03-DEV-002",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "vpn_troubleshooting_0000",
+        "vpn_overview_0000",
+        "vpn_setup_0002",
+        "vpn_setup_0000",
+        "vpn_setup_0001"
+      ],
+      "retrieved_source_ids": [
+        "vpn_troubleshooting",
+        "vpn_overview",
+        "vpn_setup",
+        "vpn_setup",
+        "vpn_setup"
+      ],
+      "gold_source_ids": [
+        "vpn_troubleshooting"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 423.9815
+    },
+    {
+      "question_id": "T03-DEV-003",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_firewalls_0000",
+        "acceptable_use_policy_0006",
+        "acceptable_use_policy_0005",
+        "access_requests_0000",
+        "password_standard_0003"
+      ],
+      "retrieved_source_ids": [
+        "laptop_firewalls",
+        "acceptable_use_policy",
+        "acceptable_use_policy",
+        "access_requests",
+        "password_standard"
+      ],
+      "gold_source_ids": [
+        "laptop_firewalls"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 285.1279
+    },
+    {
+      "question_id": "T03-DEV-004",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "vpn_troubleshooting_0000",
+        "vpn_setup_0000",
+        "vpn_overview_0000",
+        "vpn_setup_0002",
+        "vpn_setup_0003"
+      ],
+      "retrieved_source_ids": [
+        "vpn_troubleshooting",
+        "vpn_setup",
+        "vpn_overview",
+        "vpn_setup",
+        "vpn_setup"
+      ],
+      "gold_source_ids": [
+        "vpn_troubleshooting"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 481.3066
+    },
+    {
+      "question_id": "T03-DEV-005",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_firewalls_0000",
+        "laptop_firewalls_0001",
+        "laptop_firewalls_0002",
+        "acceptable_use_policy_0015",
+        "laptop_security_0000"
+      ],
+      "retrieved_source_ids": [
+        "laptop_firewalls",
+        "laptop_firewalls",
+        "laptop_firewalls",
+        "acceptable_use_policy",
+        "laptop_security"
+      ],
+      "gold_source_ids": [
+        "laptop_firewalls"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.5,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 566.2173
+    },
+    {
+      "question_id": "T03-DEV-006",
+      "question_type": "comparison",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "vpn_setup_0000",
+        "vpn_troubleshooting_0000",
+        "vpn_setup_0002",
+        "vpn_setup_0001",
+        "corporate_systems_0009"
+      ],
+      "retrieved_source_ids": [
+        "vpn_setup",
+        "vpn_troubleshooting",
+        "vpn_setup",
+        "vpn_setup",
+        "corporate_systems"
+      ],
+      "gold_source_ids": [
+        "vpn_setup"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 345.7439
+    },
+    {
+      "question_id": "T03-DEV-007",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "vpn_overview_0000",
+        "laptop_firewalls_0000",
+        "wireless_networks_0001",
+        "okta_faq_0014",
+        "vpn_setup_0003"
+      ],
+      "retrieved_source_ids": [
+        "vpn_overview",
+        "laptop_firewalls",
+        "wireless_networks",
+        "okta_faq",
+        "vpn_setup"
+      ],
+      "gold_source_ids": [
+        "vpn_overview",
+        "wireless_networks"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 296.1103
+    },
+    {
+      "question_id": "T03-DEV-008",
+      "question_type": "access_denied",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "okta_faq_0010",
+        "okta_faq_0012",
+        "end_user_services_0002",
+        "infrastructure_incidents_0040",
+        "okta_faq_0014"
+      ],
+      "retrieved_source_ids": [
+        "okta_faq",
+        "okta_faq",
+        "end_user_services",
+        "infrastructure_incidents",
+        "okta_faq"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 186.5293
+    },
+    {
+      "question_id": "T03-DEV-009",
+      "question_type": "unanswerable",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "vpn_overview_0000",
+        "incident_paging_0004",
+        "wireless_networks_0001",
+        "laptop_firewalls_0002",
+        "vpn_setup_0000"
+      ],
+      "retrieved_source_ids": [
+        "vpn_overview",
+        "incident_paging",
+        "wireless_networks",
+        "laptop_firewalls",
+        "vpn_setup"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 147.4123
+    },
+    {
+      "question_id": "T04-DEV-001",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_management_0001",
+        "laptop_management_0000",
+        "acceptable_use_policy_0011",
+        "laptop_management_0003",
+        "laptop_security_0001"
+      ],
+      "retrieved_source_ids": [
+        "laptop_management",
+        "laptop_management",
+        "acceptable_use_policy",
+        "laptop_management",
+        "laptop_security"
+      ],
+      "gold_source_ids": [
+        "laptop_management"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 116.7722
+    },
+    {
+      "question_id": "T04-DEV-002",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_repairs_0000",
+        "laptop_repairs_0001",
+        "laptop_ordering_0002",
+        "laptop_ordering_0005",
+        "laptop_ordering_0003"
+      ],
+      "retrieved_source_ids": [
+        "laptop_repairs",
+        "laptop_repairs",
+        "laptop_ordering",
+        "laptop_ordering",
+        "laptop_ordering"
+      ],
+      "gold_source_ids": [
+        "laptop_repairs"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 352.6908
+    },
+    {
+      "question_id": "T04-DEV-003",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_management_0001",
+        "laptop_ordering_0007",
+        "laptop_management_0003",
+        "laptop_ordering_0006",
+        "laptop_management_0002"
+      ],
+      "retrieved_source_ids": [
+        "laptop_management",
+        "laptop_ordering",
+        "laptop_management",
+        "laptop_ordering",
+        "laptop_management"
+      ],
+      "gold_source_ids": [
+        "laptop_management"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.2,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 196.1911
+    },
+    {
+      "question_id": "T04-DEV-004",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "acceptable_use_policy_0015",
+        "laptop_repairs_0000",
+        "laptop_ordering_0007",
+        "infrastructure_incidents_0027",
+        "laptop_ordering_0002"
+      ],
+      "retrieved_source_ids": [
+        "acceptable_use_policy",
+        "laptop_repairs",
+        "laptop_ordering",
+        "infrastructure_incidents",
+        "laptop_ordering"
+      ],
+      "gold_source_ids": [
+        "laptop_repairs"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 0.5,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.5,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 112.1097
+    },
+    {
+      "question_id": "T04-DEV-005",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_security_0000",
+        "acceptable_use_policy_0002",
+        "laptop_management_0003",
+        "remote_device_management_0000",
+        "laptop_management_0000"
+      ],
+      "retrieved_source_ids": [
+        "laptop_security",
+        "acceptable_use_policy",
+        "laptop_management",
+        "remote_device_management",
+        "laptop_management"
+      ],
+      "gold_source_ids": [
+        "laptop_management"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 0.3333333333333333,
+      "evidence_hit": 0.0,
+      "evidence_recall": 0.0,
+      "evidence_rr": 0.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 0.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 114.2313
+    },
+    {
+      "question_id": "T04-DEV-006",
+      "question_type": "comparison",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_management_0003",
+        "acceptable_use_policy_0002",
+        "laptop_management_0000",
+        "laptop_security_0000",
+        "remote_device_management_0001"
+      ],
+      "retrieved_source_ids": [
+        "laptop_management",
+        "acceptable_use_policy",
+        "laptop_management",
+        "laptop_security",
+        "remote_device_management"
+      ],
+      "gold_source_ids": [
+        "laptop_management"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 110.4075
+    },
+    {
+      "question_id": "T04-DEV-007",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "remote_device_management_0000",
+        "laptop_management_0000",
+        "laptop_management_0004",
+        "acceptable_use_policy_0002",
+        "laptop_security_0000"
+      ],
+      "retrieved_source_ids": [
+        "remote_device_management",
+        "laptop_management",
+        "laptop_management",
+        "acceptable_use_policy",
+        "laptop_security"
+      ],
+      "gold_source_ids": [
+        "laptop_management",
+        "remote_device_management"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 108.4411
+    },
+    {
+      "question_id": "T04-DEV-008",
+      "question_type": "access_denied",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "acceptable_use_policy_0003",
+        "laptop_ordering_0006",
+        "acceptable_use_policy_0000",
+        "remote_device_management_0002",
+        "acceptable_use_policy_0010"
+      ],
+      "retrieved_source_ids": [
+        "acceptable_use_policy",
+        "laptop_ordering",
+        "acceptable_use_policy",
+        "remote_device_management",
+        "acceptable_use_policy"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 124.0925
+    },
+    {
+      "question_id": "T04-DEV-009",
+      "question_type": "unanswerable",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_repairs_0001",
+        "laptop_ordering_0005",
+        "laptop_ordering_0003",
+        "laptop_ordering_0006",
+        "laptop_ordering_0004"
+      ],
+      "retrieved_source_ids": [
+        "laptop_repairs",
+        "laptop_ordering",
+        "laptop_ordering",
+        "laptop_ordering",
+        "laptop_ordering"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 136.5924
+    },
+    {
+      "question_id": "T05-DEV-001",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "compass_user_guide_0000",
+        "compass_user_guide_0008",
+        "compass_user_guide_0001",
+        "compass_user_guide_0009",
+        "compass_user_guide_0002"
+      ],
+      "retrieved_source_ids": [
+        "compass_user_guide",
+        "compass_user_guide",
+        "compass_user_guide",
+        "compass_user_guide",
+        "compass_user_guide"
+      ],
+      "gold_source_ids": [
+        "compass_user_guide"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 124.5686
+    },
+    {
+      "question_id": "T05-DEV-002",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "reclaim_ai_0000",
+        "reclaim_ai_0001",
+        "reclaim_ai_0002",
+        "reclaim_ai_0003",
+        "compass_user_guide_0008"
+      ],
+      "retrieved_source_ids": [
+        "reclaim_ai",
+        "reclaim_ai",
+        "reclaim_ai",
+        "reclaim_ai",
+        "compass_user_guide"
+      ],
+      "gold_source_ids": [
+        "reclaim_ai"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 91.3622
+    },
+    {
+      "question_id": "T05-DEV-003",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "zoom_setup_0001",
+        "zoom_setup_0002",
+        "zoom_setup_0000",
+        "password_guidelines_0009",
+        "infrastructure_incidents_0023"
+      ],
+      "retrieved_source_ids": [
+        "zoom_setup",
+        "zoom_setup",
+        "zoom_setup",
+        "password_guidelines",
+        "infrastructure_incidents"
+      ],
+      "gold_source_ids": [
+        "zoom_setup"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 93.5037
+    },
+    {
+      "question_id": "T05-DEV-004",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "zoom_setup_0000",
+        "it_onboarding_0003",
+        "it_onboarding_0004",
+        "acceptable_use_policy_0002",
+        "laptop_ordering_0002"
+      ],
+      "retrieved_source_ids": [
+        "zoom_setup",
+        "it_onboarding",
+        "it_onboarding",
+        "acceptable_use_policy",
+        "laptop_ordering"
+      ],
+      "gold_source_ids": [
+        "zoom_setup"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 72.9188
+    },
+    {
+      "question_id": "T05-DEV-005",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "compass_user_guide_0003",
+        "compass_user_guide_0008",
+        "compass_user_guide_0009",
+        "okta_guide_0002",
+        "compass_user_guide_0000"
+      ],
+      "retrieved_source_ids": [
+        "compass_user_guide",
+        "compass_user_guide",
+        "compass_user_guide",
+        "okta_guide",
+        "compass_user_guide"
+      ],
+      "gold_source_ids": [
+        "compass_user_guide"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 78.3772
+    },
+    {
+      "question_id": "T05-DEV-006",
+      "question_type": "comparison",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "compass_user_guide_0001",
+        "compass_user_guide_0002",
+        "compass_user_guide_0009",
+        "compass_user_guide_0007",
+        "compass_user_guide_0004"
+      ],
+      "retrieved_source_ids": [
+        "compass_user_guide",
+        "compass_user_guide",
+        "compass_user_guide",
+        "compass_user_guide",
+        "compass_user_guide"
+      ],
+      "gold_source_ids": [
+        "compass_user_guide"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 74.629
+    },
+    {
+      "question_id": "T05-DEV-007",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "compass_user_guide_0003",
+        "compass_user_guide_0008",
+        "compass_user_guide_0000",
+        "end_user_services_0002",
+        "okta_faq_0000"
+      ],
+      "retrieved_source_ids": [
+        "compass_user_guide",
+        "compass_user_guide",
+        "compass_user_guide",
+        "end_user_services",
+        "okta_faq"
+      ],
+      "gold_source_ids": [
+        "compass_user_guide",
+        "zoom_setup"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 0.5,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 0.5,
+      "evidence_rr": 1.0,
+      "all_sources_found": 0.0,
+      "all_evidence_found": 0.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 74.8889
+    },
+    {
+      "question_id": "T05-DEV-008",
+      "question_type": "access_denied",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "acceptable_use_policy_0005",
+        "okta_faq_0002",
+        "acceptable_use_policy_0011",
+        "acceptable_use_policy_0006",
+        "password_standard_0003"
+      ],
+      "retrieved_source_ids": [
+        "acceptable_use_policy",
+        "okta_faq",
+        "acceptable_use_policy",
+        "acceptable_use_policy",
+        "password_standard"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 69.5736
+    },
+    {
+      "question_id": "T05-DEV-009",
+      "question_type": "unanswerable",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "reclaim_ai_0000",
+        "reclaim_ai_0001",
+        "reclaim_ai_0003",
+        "reclaim_ai_0002",
+        "compass_user_guide_0006"
+      ],
+      "retrieved_source_ids": [
+        "reclaim_ai",
+        "reclaim_ai",
+        "reclaim_ai",
+        "reclaim_ai",
+        "compass_user_guide"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 81.404
+    },
+    {
+      "question_id": "T06-DEV-001",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "access_requests_0000",
+        "access_requests_0001",
+        "compass_user_guide_0003",
+        "end_user_services_0000",
+        "compass_user_guide_0006"
+      ],
+      "retrieved_source_ids": [
+        "access_requests",
+        "access_requests",
+        "compass_user_guide",
+        "end_user_services",
+        "compass_user_guide"
+      ],
+      "gold_source_ids": [
+        "access_requests"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 95.5661
+    },
+    {
+      "question_id": "T06-DEV-002",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "access_requests_0001",
+        "access_requests_0000",
+        "access_requests_0002",
+        "password_guidelines_0008",
+        "okta_faq_0003"
+      ],
+      "retrieved_source_ids": [
+        "access_requests",
+        "access_requests",
+        "access_requests",
+        "password_guidelines",
+        "okta_faq"
+      ],
+      "gold_source_ids": [
+        "access_requests"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 79.1976
+    },
+    {
+      "question_id": "T06-DEV-003",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "corporate_security_support_0000",
+        "corporate_systems_0000",
+        "corporate_security_support_0004",
+        "corporate_security_support_0003",
+        "end_user_services_0002"
+      ],
+      "retrieved_source_ids": [
+        "corporate_security_support",
+        "corporate_systems",
+        "corporate_security_support",
+        "corporate_security_support",
+        "end_user_services"
+      ],
+      "gold_source_ids": [
+        "corporate_security_support"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 95.2056
+    },
+    {
+      "question_id": "T06-DEV-004",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "infrastructure_incidents_0027",
+        "infrastructure_incidents_0000",
+        "reclaim_ai_0001",
+        "laptop_ordering_0002",
+        "acceptable_use_policy_0015"
+      ],
+      "retrieved_source_ids": [
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "reclaim_ai",
+        "laptop_ordering",
+        "acceptable_use_policy"
+      ],
+      "gold_source_ids": [
+        "access_requests"
+      ],
+      "source_hit": 0.0,
+      "source_recall": 0.0,
+      "source_rr": 0.0,
+      "evidence_hit": 0.0,
+      "evidence_recall": 0.0,
+      "evidence_rr": 0.0,
+      "all_sources_found": 0.0,
+      "all_evidence_found": 0.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 91.9437
+    },
+    {
+      "question_id": "T06-DEV-005",
+      "question_type": "procedure",
+      "user_role": "it_support",
+      "retrieved_chunk_ids": [
+        "it_access_requests_0000",
+        "it_mfa_support_0000",
+        "it_account_recovery_0000",
+        "it_collaboration_support_0000",
+        "it_policy_support_0000"
+      ],
+      "retrieved_source_ids": [
+        "it_access_requests",
+        "it_mfa_support",
+        "it_account_recovery",
+        "it_collaboration_support",
+        "it_policy_support"
+      ],
+      "gold_source_ids": [
+        "it_access_requests"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 84.2321
+    },
+    {
+      "question_id": "T06-DEV-006",
+      "question_type": "comparison",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "access_requests_0000",
+        "corporate_security_support_0000",
+        "end_user_services_0000",
+        "corporate_systems_0000",
+        "corporate_security_support_0002"
+      ],
+      "retrieved_source_ids": [
+        "access_requests",
+        "corporate_security_support",
+        "end_user_services",
+        "corporate_systems",
+        "corporate_security_support"
+      ],
+      "gold_source_ids": [
+        "access_requests"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 76.574
+    },
+    {
+      "question_id": "T06-DEV-007",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "access_requests_0000",
+        "corporate_systems_0000",
+        "corporate_security_support_0000",
+        "corporate_security_support_0003",
+        "compass_user_guide_0004"
+      ],
+      "retrieved_source_ids": [
+        "access_requests",
+        "corporate_systems",
+        "corporate_security_support",
+        "corporate_security_support",
+        "compass_user_guide"
+      ],
+      "gold_source_ids": [
+        "access_requests",
+        "corporate_security_support"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 82.901
+    },
+    {
+      "question_id": "T06-DEV-008",
+      "question_type": "access_denied",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "remote_device_management_0002",
+        "okta_faq_0014",
+        "acceptable_use_policy_0010",
+        "infrastructure_incidents_0017",
+        "infrastructure_incidents_0013"
+      ],
+      "retrieved_source_ids": [
+        "remote_device_management",
+        "okta_faq",
+        "acceptable_use_policy",
+        "infrastructure_incidents",
+        "infrastructure_incidents"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 87.4177
+    },
+    {
+      "question_id": "T06-DEV-009",
+      "question_type": "unanswerable",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "compass_user_guide_0007",
+        "access_requests_0000",
+        "compass_user_guide_0004",
+        "corporate_systems_0010",
+        "compass_user_guide_0005"
+      ],
+      "retrieved_source_ids": [
+        "compass_user_guide",
+        "access_requests",
+        "compass_user_guide",
+        "corporate_systems",
+        "compass_user_guide"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 80.8295
+    },
+    {
+      "question_id": "T07-DEV-001",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_screen_lock_0000",
+        "acceptable_use_policy_0011",
+        "laptop_security_0000",
+        "laptop_ordering_0004",
+        "laptop_ordering_0005"
+      ],
+      "retrieved_source_ids": [
+        "laptop_screen_lock",
+        "acceptable_use_policy",
+        "laptop_security",
+        "laptop_ordering",
+        "laptop_ordering"
+      ],
+      "gold_source_ids": [
+        "laptop_screen_lock"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 91.7145
+    },
+    {
+      "question_id": "T07-DEV-002",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_security_0001",
+        "laptop_personal_use_0000",
+        "acceptable_use_policy_0001",
+        "acceptable_use_policy_0013",
+        "acceptable_use_policy_0011"
+      ],
+      "retrieved_source_ids": [
+        "laptop_security",
+        "laptop_personal_use",
+        "acceptable_use_policy",
+        "acceptable_use_policy",
+        "acceptable_use_policy"
+      ],
+      "gold_source_ids": [
+        "laptop_personal_use"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 0.5,
+      "evidence_hit": 0.0,
+      "evidence_recall": 0.0,
+      "evidence_rr": 0.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 0.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 137.6615
+    },
+    {
+      "question_id": "T07-DEV-003",
+      "question_type": "fact",
+      "user_role": "admin",
+      "retrieved_chunk_ids": [
+        "admin_password_exceptions_0000",
+        "admin_security_exceptions_0000",
+        "admin_identity_audit_0000",
+        "admin_asset_disposal_0000",
+        "acceptable_use_policy_0006"
+      ],
+      "retrieved_source_ids": [
+        "admin_password_exceptions",
+        "admin_security_exceptions",
+        "admin_identity_audit",
+        "admin_asset_disposal",
+        "acceptable_use_policy"
+      ],
+      "gold_source_ids": [
+        "admin_security_exceptions"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 0.5,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 0.5,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 245.5237
+    },
+    {
+      "question_id": "T07-DEV-004",
+      "question_type": "procedure",
+      "user_role": "it_support",
+      "retrieved_chunk_ids": [
+        "it_policy_support_0000",
+        "it_device_support_0000",
+        "it_account_recovery_0000",
+        "it_mfa_support_0000",
+        "remote_device_management_0002"
+      ],
+      "retrieved_source_ids": [
+        "it_policy_support",
+        "it_device_support",
+        "it_account_recovery",
+        "it_mfa_support",
+        "remote_device_management"
+      ],
+      "gold_source_ids": [
+        "it_policy_support"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 392.9641
+    },
+    {
+      "question_id": "T07-DEV-005",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_screen_lock_0000",
+        "laptop_ordering_0002",
+        "acceptable_use_policy_0008",
+        "acceptable_use_policy_0015",
+        "password_guidelines_0007"
+      ],
+      "retrieved_source_ids": [
+        "laptop_screen_lock",
+        "laptop_ordering",
+        "acceptable_use_policy",
+        "acceptable_use_policy",
+        "password_guidelines"
+      ],
+      "gold_source_ids": [
+        "laptop_screen_lock"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 80.6467
+    },
+    {
+      "question_id": "T07-DEV-006",
+      "question_type": "comparison",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_personal_use_0000",
+        "acceptable_use_policy_0010",
+        "acceptable_use_policy_0001",
+        "acceptable_use_policy_0011",
+        "laptop_ordering_0007"
+      ],
+      "retrieved_source_ids": [
+        "laptop_personal_use",
+        "acceptable_use_policy",
+        "acceptable_use_policy",
+        "acceptable_use_policy",
+        "laptop_ordering"
+      ],
+      "gold_source_ids": [
+        "laptop_personal_use"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 80.3783
+    },
+    {
+      "question_id": "T07-DEV-007",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "laptop_screen_lock_0000",
+        "laptop_firewalls_0001",
+        "acceptable_use_policy_0011",
+        "acceptable_use_policy_0007",
+        "acceptable_use_policy_0000"
+      ],
+      "retrieved_source_ids": [
+        "laptop_screen_lock",
+        "laptop_firewalls",
+        "acceptable_use_policy",
+        "acceptable_use_policy",
+        "acceptable_use_policy"
+      ],
+      "gold_source_ids": [
+        "acceptable_use_policy",
+        "laptop_screen_lock"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 163.3946
+    },
+    {
+      "question_id": "T07-DEV-008",
+      "question_type": "access_denied",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "remote_device_management_0002",
+        "acceptable_use_policy_0011",
+        "okta_faq_0010",
+        "acceptable_use_policy_0003",
+        "okta_faq_0002"
+      ],
+      "retrieved_source_ids": [
+        "remote_device_management",
+        "acceptable_use_policy",
+        "okta_faq",
+        "acceptable_use_policy",
+        "okta_faq"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 104.711
+    },
+    {
+      "question_id": "T07-DEV-009",
+      "question_type": "unanswerable",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "password_standard_0006",
+        "infrastructure_incidents_0014",
+        "password_standard_0004",
+        "acceptable_use_policy_0015",
+        "infrastructure_incidents_0002"
+      ],
+      "retrieved_source_ids": [
+        "password_standard",
+        "infrastructure_incidents",
+        "password_standard",
+        "acceptable_use_policy",
+        "infrastructure_incidents"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 148.0654
+    },
+    {
+      "question_id": "T08-DEV-001",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "incident_response_0000",
+        "incident_response_0001",
+        "infrastructure_incidents_0000",
+        "acceptable_use_policy_0007",
+        "infrastructure_incidents_0009"
+      ],
+      "retrieved_source_ids": [
+        "incident_response",
+        "incident_response",
+        "infrastructure_incidents",
+        "acceptable_use_policy",
+        "infrastructure_incidents"
+      ],
+      "gold_source_ids": [
+        "incident_response"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 125.769
+    },
+    {
+      "question_id": "T08-DEV-002",
+      "question_type": "fact",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "incident_paging_0002",
+        "infrastructure_incidents_0035",
+        "infrastructure_incidents_0036",
+        "infrastructure_incidents_0038",
+        "acceptable_use_policy_0004"
+      ],
+      "retrieved_source_ids": [
+        "incident_paging",
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "acceptable_use_policy"
+      ],
+      "gold_source_ids": [
+        "support_system_incidents"
+      ],
+      "source_hit": 0.0,
+      "source_recall": 0.0,
+      "source_rr": 0.0,
+      "evidence_hit": 0.0,
+      "evidence_recall": 0.0,
+      "evidence_rr": 0.0,
+      "all_sources_found": 0.0,
+      "all_evidence_found": 0.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 105.4939
+    },
+    {
+      "question_id": "T08-DEV-003",
+      "question_type": "fact",
+      "user_role": "admin",
+      "retrieved_chunk_ids": [
+        "admin_incident_coordination_0000",
+        "infrastructure_incidents_0006",
+        "infrastructure_incidents_0005",
+        "infrastructure_incidents_0015",
+        "it_outage_response_0000"
+      ],
+      "retrieved_source_ids": [
+        "admin_incident_coordination",
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "it_outage_response"
+      ],
+      "gold_source_ids": [
+        "admin_incident_coordination"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 90.823
+    },
+    {
+      "question_id": "T08-DEV-004",
+      "question_type": "procedure",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "support_system_incidents_0000",
+        "incident_paging_0002",
+        "support_system_incidents_0001",
+        "support_system_incidents_0010",
+        "support_system_incidents_0009"
+      ],
+      "retrieved_source_ids": [
+        "support_system_incidents",
+        "incident_paging",
+        "support_system_incidents",
+        "support_system_incidents",
+        "support_system_incidents"
+      ],
+      "gold_source_ids": [
+        "support_system_incidents"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 85.766
+    },
+    {
+      "question_id": "T08-DEV-005",
+      "question_type": "procedure",
+      "user_role": "it_support",
+      "retrieved_chunk_ids": [
+        "it_outage_response_0000",
+        "infrastructure_incidents_0035",
+        "incident_response_0001",
+        "support_system_incidents_0006",
+        "infrastructure_incidents_0029"
+      ],
+      "retrieved_source_ids": [
+        "it_outage_response",
+        "infrastructure_incidents",
+        "incident_response",
+        "support_system_incidents",
+        "infrastructure_incidents"
+      ],
+      "gold_source_ids": [
+        "it_outage_response"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 117.5968
+    },
+    {
+      "question_id": "T08-DEV-006",
+      "question_type": "comparison",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "incident_response_0000",
+        "incident_response_0001",
+        "infrastructure_incidents_0009",
+        "infrastructure_incidents_0000",
+        "infrastructure_incidents_0029"
+      ],
+      "retrieved_source_ids": [
+        "incident_response",
+        "incident_response",
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "infrastructure_incidents"
+      ],
+      "gold_source_ids": [
+        "incident_response"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 1.0,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 1.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 72.0187
+    },
+    {
+      "question_id": "T08-DEV-007",
+      "question_type": "multi_source",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "incident_response_0001",
+        "infrastructure_incidents_0000",
+        "infrastructure_incidents_0001",
+        "infrastructure_incidents_0030",
+        "incident_response_0000"
+      ],
+      "retrieved_source_ids": [
+        "incident_response",
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "incident_response"
+      ],
+      "gold_source_ids": [
+        "incident_response",
+        "infrastructure_incidents"
+      ],
+      "source_hit": 1.0,
+      "source_recall": 1.0,
+      "source_rr": 1.0,
+      "evidence_hit": 1.0,
+      "evidence_recall": 0.5,
+      "evidence_rr": 1.0,
+      "all_sources_found": 1.0,
+      "all_evidence_found": 0.0,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 85.9773
+    },
+    {
+      "question_id": "T08-DEV-008",
+      "question_type": "access_denied",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "support_system_incidents_0004",
+        "support_system_incidents_0000",
+        "support_system_incidents_0003",
+        "support_system_incidents_0002",
+        "support_system_incidents_0006"
+      ],
+      "retrieved_source_ids": [
+        "support_system_incidents",
+        "support_system_incidents",
+        "support_system_incidents",
+        "support_system_incidents",
+        "support_system_incidents"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 93.0529
+    },
+    {
+      "question_id": "T08-DEV-009",
+      "question_type": "unanswerable",
+      "user_role": "employee",
+      "retrieved_chunk_ids": [
+        "infrastructure_incidents_0030",
+        "infrastructure_incidents_0029",
+        "infrastructure_incidents_0031",
+        "incident_paging_0001",
+        "reclaim_ai_0002"
+      ],
+      "retrieved_source_ids": [
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "infrastructure_incidents",
+        "incident_paging",
+        "reclaim_ai"
+      ],
+      "gold_source_ids": null,
+      "source_hit": null,
+      "source_recall": null,
+      "source_rr": null,
+      "evidence_hit": null,
+      "evidence_recall": null,
+      "evidence_rr": null,
+      "all_sources_found": null,
+      "all_evidence_found": null,
+      "unauthorized_chunk_count": 0,
+      "latency_ms": 89.4151
+    }
+  ]
+}

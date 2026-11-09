@@ -5,3 +5,4 @@ httpx
 pytest
 requests
 trafilatura
+rank-bm25==0.2.2

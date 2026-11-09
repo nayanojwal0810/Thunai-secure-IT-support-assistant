@@ -21,9 +21,35 @@ from sentence_transformers import SentenceTransformer
 
 from app.core.config import settings
 from app.rag.bm25_retrieval import SUPPORTED_ROLES
-from app.rag.document_processing import EXPECTED_ROLES, PROJECT_ROOT
+from app.rag.document_processing import EXPECTED_ROLES, PROJECT_ROOT, REQUIRED_SCHEMA_KEYS
 
 DEFAULT_CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "chunks.jsonl"
+
+REQUIRED_CHUNK_FIELDS: List[str] = [
+    "chunk_id",
+    "source_id",
+    "chunk_index",
+    "document_title",
+    "original_url",
+    "publisher",
+    "topic",
+    "classification",
+    "allowed_roles",
+    "synthetic",
+    "version",
+    "review_status",
+    "source_sha256",
+    "start_word",
+    "end_word",
+    "text",
+]
+
+INDEXING_FIELDS: List[str] = [
+    "model_id",
+    "corpus_sha256",
+]
+
+REQUIRED_PAYLOAD_KEYS = set(REQUIRED_CHUNK_FIELDS) | set(INDEXING_FIELDS)
 
 MODEL_CONFIGS: Dict[str, Dict[str, Any]] = {
     "minilm": {
@@ -204,6 +230,10 @@ class DenseRetriever:
         if not np.all(np.isfinite(vectors)):
             raise ValueError("Generated document embeddings contain non-finite values (NaN or Inf)")
 
+        norms = np.linalg.norm(vectors, axis=1)
+        if np.any(norms == 0.0) or np.any(np.isclose(norms, 0.0)):
+            raise ValueError("Generated document embeddings contain zero vector(s)")
+
         return vectors
 
     def encode_query(self, query: str) -> List[float]:
@@ -225,6 +255,10 @@ class DenseRetriever:
             )
         if not all(math.isfinite(x) for x in vec):
             raise ValueError("Query embedding contains non-finite values")
+
+        query_norm = math.sqrt(sum(x * x for x in vec))
+        if math.isclose(query_norm, 0.0):
+            raise ValueError("Query embedding has zero norm (all-zero vector)")
 
         return vec
 
@@ -250,7 +284,7 @@ class DenseRetriever:
         if points_count != len(self.chunks):
             return False, f"Point count mismatch: expected {len(self.chunks)}, got {points_count}"
 
-        # Paginate through all points to check deterministic IDs, metadata, and corpus hash
+        # Paginate through all points to check deterministic IDs, complete payload verification, and corpus hash
         expected_chunks_by_id = {c["chunk_id"]: c for c in self.chunks}
         seen_chunk_ids = set()
         seen_point_ids = set()
@@ -278,23 +312,47 @@ class DenseRetriever:
                 if str(pid).lower() != generate_point_id(cid).lower():
                     return False, f"Point ID '{pid}' does not match deterministic UUID for chunk '{cid}'"
 
+                payload_keys = set(payload.keys())
+                missing_keys = REQUIRED_PAYLOAD_KEYS - payload_keys
+                if missing_keys:
+                    return False, (
+                        f"Missing payload field(s) {sorted(missing_keys)} for chunk '{cid}' in point {pid}"
+                    )
+
+                unexpected_keys = payload_keys - REQUIRED_PAYLOAD_KEYS
+                if unexpected_keys:
+                    return False, (
+                        f"Unexpected payload field(s) {sorted(unexpected_keys)} for chunk '{cid}' in point {pid}"
+                    )
+
                 if payload.get("model_id") != self.model_id:
                     return False, (
-                        f"Model ID mismatch for chunk {cid}: expected '{self.model_id}', "
+                        f"Model ID mismatch for chunk '{cid}': expected '{self.model_id}', "
                         f"got '{payload.get('model_id')}'"
                     )
 
                 if payload.get("corpus_sha256") != self.corpus_sha256:
                     return False, (
-                        f"Corpus SHA-256 mismatch for chunk {cid}: expected '{self.corpus_sha256}', "
+                        f"Corpus SHA-256 mismatch for chunk '{cid}': expected '{self.corpus_sha256}', "
                         f"got '{payload.get('corpus_sha256')}'"
                     )
 
                 expected_chunk = expected_chunks_by_id[cid]
-                if payload.get("classification") != expected_chunk["classification"]:
-                    return False, f"Classification mismatch in point {pid}"
-                if set(payload.get("allowed_roles", [])) != set(expected_chunk["allowed_roles"]):
-                    return False, f"Allowed roles mismatch in point {pid}"
+                for field in REQUIRED_CHUNK_FIELDS:
+                    expected_val = expected_chunk[field]
+                    stored_val = payload[field]
+                    if field == "allowed_roles":
+                        if not isinstance(stored_val, list) or set(stored_val) != set(expected_val):
+                            return False, (
+                                f"Field 'allowed_roles' mismatch for chunk '{cid}': "
+                                f"expected {expected_val!r}, got {stored_val!r}"
+                            )
+                    else:
+                        if stored_val != expected_val:
+                            return False, (
+                                f"Field '{field}' mismatch for chunk '{cid}': "
+                                f"expected {expected_val!r}, got {stored_val!r}"
+                            )
 
                 seen_chunk_ids.add(cid)
 

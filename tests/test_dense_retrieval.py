@@ -232,3 +232,140 @@ def test_collection_integrity_and_stale_hash_rejection():
 
     with pytest.raises(ValueError, match="failed integrity verification"):
         retriever.index_chunks(rebuild=False)
+
+
+class ZeroEncoder:
+    """Test-only encoder returning all-zero vectors of dimension 384."""
+
+    def __init__(self, dim: int = 384):
+        self.dim = dim
+
+    def encode(
+        self,
+        texts,
+        batch_size=16,
+        normalize_embeddings=True,
+        show_progress_bar=False,
+    ):
+        return np.zeros((len(texts), self.dim), dtype=np.float32)
+
+
+def test_payload_integrity_detects_changed_document_text():
+    """Test A: Verify integrity verification detects altered text payload and refuses reuse."""
+    client = QdrantClient(":memory:")
+    encoder = FakeEncoder()
+    retriever = DenseRetriever(
+        model_name="minilm",
+        client=client,
+        encoder=encoder,
+        chunks=SAMPLE_CHUNKS,
+    )
+    retriever.index_chunks(rebuild=True)
+    is_valid, reason = retriever.check_collection_integrity()
+    assert is_valid, f"Initial integrity check failed: {reason}"
+
+    # Corrupt text field of first point
+    target_chunk = SAMPLE_CHUNKS[0]
+    point_id = generate_point_id(target_chunk["chunk_id"])
+    client.set_payload(
+        collection_name=retriever.collection_name,
+        payload={"text": "corrupted document text content that differs from original"},
+        points=[point_id],
+    )
+
+    is_valid, reason = retriever.check_collection_integrity()
+    assert not is_valid
+    assert target_chunk["chunk_id"] in reason
+    assert "text" in reason
+
+    with pytest.raises(ValueError, match="failed integrity verification"):
+        retriever.index_chunks(rebuild=False)
+
+
+def test_payload_integrity_detects_changed_metadata():
+    """Test B: Verify integrity verification detects altered topic or version metadata."""
+    client = QdrantClient(":memory:")
+    encoder = FakeEncoder()
+    retriever = DenseRetriever(
+        model_name="minilm",
+        client=client,
+        encoder=encoder,
+        chunks=SAMPLE_CHUNKS,
+    )
+    retriever.index_chunks(rebuild=True)
+
+    target_chunk = SAMPLE_CHUNKS[0]
+    point_id = generate_point_id(target_chunk["chunk_id"])
+
+    # Alter topic
+    client.set_payload(
+        collection_name=retriever.collection_name,
+        payload={"topic": "T99"},
+        points=[point_id],
+    )
+    is_valid, reason = retriever.check_collection_integrity()
+    assert not is_valid
+    assert target_chunk["chunk_id"] in reason
+    assert "topic" in reason
+
+    # Reset topic and alter version
+    client.set_payload(
+        collection_name=retriever.collection_name,
+        payload={"topic": target_chunk["topic"], "version": 99},
+        points=[point_id],
+    )
+    is_valid, reason = retriever.check_collection_integrity()
+    assert not is_valid
+    assert target_chunk["chunk_id"] in reason
+    assert "version" in reason
+
+
+def test_payload_integrity_detects_missing_payload_field():
+    """Test C: Verify integrity verification detects a missing required payload field."""
+    client = QdrantClient(":memory:")
+    encoder = FakeEncoder()
+    retriever = DenseRetriever(
+        model_name="minilm",
+        client=client,
+        encoder=encoder,
+        chunks=SAMPLE_CHUNKS,
+    )
+    retriever.index_chunks(rebuild=True)
+
+    target_chunk = SAMPLE_CHUNKS[0]
+    point_id = generate_point_id(target_chunk["chunk_id"])
+
+    client.delete_payload(
+        collection_name=retriever.collection_name,
+        keys=["document_title"],
+        points=[point_id],
+    )
+    is_valid, reason = retriever.check_collection_integrity()
+    assert not is_valid
+    assert "document_title" in reason
+
+
+def test_reject_zero_document_embeddings():
+    """Test D: Verify encode_documents raises ValueError on zero embedding vectors."""
+    client = QdrantClient(":memory:")
+    retriever = DenseRetriever(
+        model_name="minilm",
+        client=client,
+        encoder=ZeroEncoder(dim=384),
+        chunks=SAMPLE_CHUNKS,
+    )
+    with pytest.raises(ValueError, match="zero vector"):
+        retriever.encode_documents(SAMPLE_CHUNKS)
+
+
+def test_reject_zero_query_embedding():
+    """Test E: Verify encode_query raises ValueError on all-zero query embeddings."""
+    client = QdrantClient(":memory:")
+    retriever = DenseRetriever(
+        model_name="minilm",
+        client=client,
+        encoder=ZeroEncoder(dim=384),
+        chunks=SAMPLE_CHUNKS,
+    )
+    with pytest.raises(ValueError, match="zero norm"):
+        retriever.encode_query("search query for IT support")

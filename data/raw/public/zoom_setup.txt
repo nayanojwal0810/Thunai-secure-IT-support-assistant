@@ -1,0 +1,54 @@
+Title: Zoom Setup
+Original URL: https://handbook.gitlab.com/handbook/eta/corporate-it/end-user-services/supported-apps/zoom/zoom-setup/
+Publisher: GitLab
+License: CC BY-SA 4.0
+Collection Date: 2026-11-09
+Note: Converted from webpage HTML to text. Content is attributed to GitLab under CC BY-SA 4.0.
+
+---
+
+Zoom Setup
+Basic installation and setup steps
+Index
+Installation
+If you are using a GitLab-provided MacBook Zoom should be installed automatically when you first set up the laptop. To install the app manually, please see the steps below.
+MacOS
+- Open the Self Service app found by opening Finder and going to Applications. Search for Zoom and select the Install option.
+- Alternatively, you can also download and install Zoom directly from the official Zoom download page
+Linux
+- You can download the most recent version of Zoom here
+Setup
+- Open the Zoom app
+- Under or sign in with, click on SSO
+- Chrome should open automatically and bring you to an Okta login page where you’ll need to sign in with your Okta credentials
+- Click on the blue Launch Zoom Workplace button in your Chrome tab. You should now see your profile picture in the top-right corner of the Zoom app window
+Connect Zoom to Other Apps
+Google Chrome
+- The Zoom extension should be installed by default
+  - If not, you an install it from the Chrome Web Store
+- Click on the Zoom Chrome extension button next to the URL bar (You may need to click on the puzzle piece button first)
+- Click on Sign in to Zoom
+- On the subsequent screen, click on SSO
+- Enter gitlab in the Company Domain field and click Continue
+- Sign in with Okta and confirm that you want to allow Chrome to access Zoom if prompted
+Google Calendar
+The Chrome extension will allow you to create Zoom meetings through Google Calendar. However, you can also create a normal meeting and add Zoom links manually via the Add video conferencing option
+- Open Google Calendar in Chrome
+- Click on the Zoom icon on the right-side of the screen
+  - If the icon is not available, click on the + button on the right-side of the screen and install the Zoom extension from the Google Workspace Marketplace
+- Click the blue Sign in button
+- Review the app permissions and click Allow
+- On the Confirm Connection Between Your Zoom and Google Workspace Accounts screen, click Confirm
+- Close the pop-up screen with the Authorization Successful! notification
+- Enable Bidirectional sync for Zoom meeting data between Zoom web portal and calendars to better sync Google Calendar and Zoom
+Slack
+It’s possible to start Zoom meetings directly from Slack using the /zoom command in any Slack channel or chat
+- Open Slack and search for Zoom in the search bar and click on ZoomApp
+- Type /zoom in the chat with the Zoom App and press Enter
+- Click on Authorize Zoom
+- Review the app permissions and click Allow
+- On the Sign in to Zoom with Slack screen, click on Accept and continue followed by Confirm
+- Review the integration settings and click Save once you’re done
+- You’ll now be able to use the Zoom extension in Slack
+- You can review additional settings by searching for Zoom in the the Slack app
+  Last modified July 28, 2026: Retire defunct CorpSec functions and realign Corporate IT documentation (8f22e33f)

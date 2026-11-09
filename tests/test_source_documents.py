@@ -17,6 +17,17 @@ EXPECTED_TOPIC_CODES = {
     "T08",
 }
 
+EXPECTED_NEW_SOURCE_IDS = {
+    "password_standard",
+    "password_guidelines",
+    "okta_guide",
+    "vpn_overview",
+    "vpn_setup",
+    "vpn_troubleshooting",
+    "laptop_repairs",
+    "zoom_setup",
+}
+
 
 def load_sources() -> list[dict[str, str]]:
     assert SOURCES_CSV.exists(), f"Missing {SOURCES_CSV}"
@@ -26,11 +37,11 @@ def load_sources() -> list[dict[str, str]]:
 
 
 def test_source_count_and_unique_ids() -> None:
-    """Verify exactly 21 records with unique source IDs."""
+    """Verify exactly 29 records with unique source IDs."""
     rows = load_sources()
-    assert len(rows) == 21
+    assert len(rows) == 29
     source_ids = [r["source_id"] for r in rows]
-    assert len(set(source_ids)) == 21
+    assert len(set(source_ids)) == 29
 
 
 def test_local_files_exist_and_not_empty() -> None:
@@ -85,3 +96,20 @@ def test_required_metadata_fields() -> None:
         assert r["review_status"] == "pending_review"
         assert r["original_url"].startswith("https://handbook.gitlab.com/")
         assert len(r["document_title"].strip()) > 0
+
+
+def test_corrected_topic_assignments() -> None:
+    """Verify the two corrected topic classifications."""
+    rows = load_sources()
+    lookup = {r["source_id"]: r["topic"] for r in rows}
+    assert lookup["laptop_screen_lock"] == "T07: IT policies and compliance"
+    assert (
+        lookup["corporate_security_support"] == "T06: Application access requests"
+    )
+
+
+def test_new_source_ids_exist() -> None:
+    """Verify all eight new source IDs exist."""
+    rows = load_sources()
+    source_ids = {r["source_id"] for r in rows}
+    assert EXPECTED_NEW_SOURCE_IDS.issubset(source_ids)

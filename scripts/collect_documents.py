@@ -1,9 +1,11 @@
 """Script to collect and prepare public GitLab Handbook IT-support documents."""
 
+import argparse
 import csv
 import hashlib
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -97,8 +99,8 @@ def build_document_text(
     return header + body + "\n"
 
 
-def collect_documents() -> bool:
-    """Download and prepare all approved documents listed in sources.csv."""
+def collect_documents(missing_only: bool = False) -> bool:
+    """Download and prepare approved documents listed in sources.csv."""
     if not SOURCES_CSV.exists():
         print(f"Error: {SOURCES_CSV} does not exist", file=sys.stderr)
         return False
@@ -115,16 +117,28 @@ def collect_documents() -> bool:
         return False
 
     session = requests.Session()
-    success_count = 0
+    downloaded_count = 0
+    skipped_count = 0
     failure_count = 0
+
+    current_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     for row in rows:
         source_id = row["source_id"]
         url = row["original_url"]
         publisher = row.get("publisher", "GitLab")
         license_name = row.get("license", "CC BY-SA 4.0")
-        access_date = row.get("access_date", "2026-11-09")
         target_file = OUTPUT_DIR / f"{source_id}.txt"
+
+        if missing_only and target_file.exists():
+            skipped_count += 1
+            # Ensure local_filename and content_sha256 are present if missing
+            if not row.get("local_filename"):
+                row["local_filename"] = f"data/raw/public/{source_id}.txt"
+            if not row.get("content_sha256"):
+                row["content_sha256"] = compute_sha256(target_file)
+            print(f"Skipping existing [{source_id}] ({target_file.name})")
+            continue
 
         print(f"Collecting [{source_id}] from {url}...")
         try:
@@ -134,6 +148,9 @@ def collect_documents() -> bool:
             if not row.get("document_title") or row["document_title"] == "pending":
                 row["document_title"] = extracted_title
             title = row["document_title"]
+
+            access_date = current_date if missing_only else row.get("access_date", current_date)
+            row["access_date"] = access_date
 
             full_text = build_document_text(
                 title=title,
@@ -150,7 +167,7 @@ def collect_documents() -> bool:
             file_hash = compute_sha256(target_file)
             row["content_sha256"] = file_hash
             row["local_filename"] = f"data/raw/public/{source_id}.txt"
-            success_count += 1
+            downloaded_count += 1
             print(f"  -> Saved {target_file.name} (SHA-256: {file_hash[:12]}...)")
         except Exception as exc:
             failure_count += 1
@@ -167,12 +184,25 @@ def collect_documents() -> bool:
         writer.writerows(rows)
 
     print(
-        f"\nCollection finished: {success_count} succeeded, "
-        f"{failure_count} failed."
+        f"\nCollection finished: {downloaded_count} downloaded, "
+        f"{skipped_count} skipped, {failure_count} failed."
     )
     return failure_count == 0
 
 
-if __name__ == "__main__":
-    success = collect_documents()
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Collect public IT documents from sources.csv"
+    )
+    parser.add_argument(
+        "--missing-only",
+        action="store_true",
+        help="Download only missing documents without overwriting existing files",
+    )
+    args = parser.parse_args()
+    success = collect_documents(missing_only=args.missing_only)
     sys.exit(0 if success else 1)
+
+
+if __name__ == "__main__":
+    main()

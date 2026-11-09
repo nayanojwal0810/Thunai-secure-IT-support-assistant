@@ -1,0 +1,31 @@
+# Virtual environment
+.venv/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE & Editor settings
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+
+# Coverage files
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Temporary downloads and generated files
+tmp/
+temp/

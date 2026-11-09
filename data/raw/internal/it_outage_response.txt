@@ -1,0 +1,22 @@
+Title: IT Service Outage Response Guide
+Document ID: it_outage_response
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: internal
+Allowed Roles: it_support,admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This guide directs IT support personnel during active service disruptions, establishing incident severity classification, escalation timelines, and communication rules.
+
+### Incident Severity Levels
+IT uses three severity levels: S1, S2 and S3. S1 means a major service is unavailable to most employees across the company. S2 means a service is significantly affected but workarounds exist for staff. S3 means limited impact affecting a small number of users.
+
+### Escalation Timelines
+IT reports a confirmed S1 incident to the incident team within ten minutes of initial identification. In addition, a service outage lasting more than 30 minutes must be reviewed for escalation to senior operations leadership.
+
+### Documentation and Resolution
+IT records affected services, symptoms, impact and response actions throughout the event. Throughout the process, IT must not claim an outage is resolved without confirmation from service owners.

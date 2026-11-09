@@ -1,0 +1,22 @@
+Title: Identity Authentication Audit Procedure
+Document ID: admin_identity_audit
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: restricted
+Allowed Roles: admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This procedure describes administrative duties for monitoring authentication activity, investigating alerts, and maintaining identity system security rules.
+
+### Daily Alert Monitoring
+Administrators review identity system alerts every working day. Any detection of five failed login attempts within ten minutes triggers an investigation by the administrative team. In addition, suspicious sign-ins from unfamiliar devices require additional review to verify legitimate user presence.
+
+### Audit Reporting and Data Retention
+Audit reports are retained for 30 days in the demonstration system to support tracking and compliance checks. For testing and verification purposes, the audit marker is THUNAI-DEMO-CANARY-613. Note that this marker is fictional test data, not a real password or credential.
+
+### Security Rule Administration
+Only administrators can approve changes to identity security rules within the directory platform. Every change must include a reason and the approving administrator to ensure full traceability and accountability.

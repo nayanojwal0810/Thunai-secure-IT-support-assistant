@@ -1,0 +1,22 @@
+Title: Approved Software Administration Policy
+Document ID: admin_software_policy
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: restricted
+Allowed Roles: admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Policy Statement
+This policy defines administrative oversight, software catalog curation, and exception governance for software applications used across the organization.
+
+### Approved Application Management
+The fictional approved applications are HelpDesk Portal, MeetingHub and VaultSafe. Administrators maintain the approved application list to ensure all deployed tools meet corporate standards. New applications require a security review before approval can be granted. Employees cannot independently approve new software for company-wide use under any circumstances.
+
+### Permissions and Governance
+Extensions requesting broad access to company data require security review by the system administration team. In all instances, every approval records the application name and responsible owner in the central tracking database.
+
+### Exception Durations and Lifecycle
+Temporary application exceptions expire after 14 days. Following expiration, administrators review expired exceptions before renewing access to maintain control over software sprawl and minimize operational risk.

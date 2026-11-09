@@ -1,0 +1,22 @@
+Title: Application Access Request Procedure
+Document ID: it_access_requests
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: internal
+Allowed Roles: it_support,admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This procedure defines the intake, validation, and provisioning workflow for employee application access requests handled by the IT support team.
+
+### Request Submission and Dual Approvals
+Employees submit application access requests through the helpdesk ticketing portal. Every request identifies the application and business reason for requesting access. To uphold internal checks, manager approval is required. In addition, application-owner approval is also required. IT must confirm both approvals before processing ordinary access for the employee.
+
+### Access Limits and Administrative Scope
+Temporary access expires after 30 days unless an earlier date is approved in the original submission. Requests seeking administrative privileges must be referred to the security administration team for dedicated governance.
+
+### Ticket Finalization
+Following fulfillment, IT records the granted access and expiration date within the ticket system to maintain an auditable permissions registry.

@@ -1,0 +1,22 @@
+Title: Security Incident Coordination Procedure
+Document ID: admin_incident_coordination
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: restricted
+Allowed Roles: admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This procedure outlines command structure, logging standards, and retrospective reviews for managing critical organizational security incidents.
+
+### Incident Command and Tracking
+An administrator assigns an Incident Commander for an S1 security incident. The Incident Commander coordinates response activities across technical and operations teams. Security incidents are tracked using a unique incident identifier across all internal communications. IT support staff cannot change the incident severity without authorized review by administrative personnel.
+
+### Active Response and Logging
+Incident actions must be recorded with timestamps to preserve an accurate chronological record. The incident team prepares internal status updates during active response to keep internal teams informed.
+
+### Post-Incident Review and Audit Marker
+A completed major incident receives a review within five working days. For tracking purposes, the demonstration audit marker is THUNAI-DEMO-INCIDENT-741. This marker is fictional test data and not a real secret.

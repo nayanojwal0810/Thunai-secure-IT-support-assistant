@@ -1,0 +1,22 @@
+Title: IT Policy Support Handling Guide
+Document ID: it_policy_support
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: internal
+Allowed Roles: it_support,admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This guide outlines how IT support staff handle employee inquiries regarding company IT policies, security boundaries, and incident reporting.
+
+### Support Scope and Clarifications
+IT support explains approved company IT policies but does not approve exceptions. Employees should not include passwords or MFA codes in support tickets submitted to the helpdesk. In addition, screenshots should be checked for sensitive information before sharing with support personnel. Support responses should link to the applicable policy document to assist employee understanding.
+
+### Incident Reporting and Exception Routing
+Employees must report lost company devices within one hour of discovering the loss. Requests for policy exceptions must be referred to the security administration team. IT must not promise approval before the review is complete.
+
+### Logging and Escalation
+IT records policy questions and routes unresolved cases to the responsible team for definitive clarification.

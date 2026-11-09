@@ -1,0 +1,22 @@
+Title: Administrative Network Access Policy
+Document ID: admin_network_access
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: restricted
+Allowed Roles: admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Policy Statement
+This policy defines governance controls, regional gateway locations, and authorization requirements for administrative network access across corporate infrastructure.
+
+### Gateway Availability and Access Controls
+Administrative network gateways are available in fictional Pune and Hyderabad locations. Only approved administrators may request administrative gateway access to perform management tasks. In all cases, gateway access requires hardware-backed MFA before authentication is granted. IT support staff cannot approve privileged gateway access under any circumstances.
+
+### Emergency Access Governance
+In urgent operational conditions, temporary emergency gateway access expires after 30 minutes. Requesting emergency access requires a recorded incident reference in the ticket registry before privileges are provisioned. In addition, every privileged gateway session must be logged continuously to track administrative activity.
+
+### Supervisory Oversight
+The Security Lead reviews emergency access usage to confirm proper operational justification and adherence to organizational security policies.

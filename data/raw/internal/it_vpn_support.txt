@@ -1,0 +1,22 @@
+Title: VPN Troubleshooting Support Procedure
+Document ID: it_vpn_support
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: internal
+Allowed Roles: it_support,admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This procedure provides IT support staff with troubleshooting instructions for employee virtual private network (VPN) connection difficulties.
+
+### Scope Assessment and Initial Checks
+When an employee reports connection failure, IT first confirms whether the issue affects one employee or multiple employees. The employee must verify that their internet connection works without VPN before diagnosing network clients. Next, IT checks whether the VPN client is installed and updated on the machine. IT asks the employee to record the exact error message received during the connection attempt.
+
+### Credential Safety and Access Validation
+During troubleshooting, IT must not request passwords or MFA codes from the user. If the failure stems from expired access permissions, the issue must be handled through the access-request process.
+
+### Escalation and Logging
+Widespread VPN failures must be escalated as potential incidents to the network operations team. Finally, the support ticket records the troubleshooting outcome upon resolution.

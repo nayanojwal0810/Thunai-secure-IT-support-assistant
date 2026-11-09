@@ -1,0 +1,22 @@
+Title: Restricted Asset Disposal Procedure
+Document ID: admin_asset_disposal
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: restricted
+Allowed Roles: admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This procedure establishes mandatory requirements for retiring, decommissioning, and securely disposing of company computing equipment and sensitive storage media.
+
+### Scope and Identification
+Disposal applies to retired company laptops and storage devices. Each device has an identifier in the format DEV-####. Before taking any decommissioning steps, administrators must verify device ownership before disposal to confirm corporate provenance and asset tracking records.
+
+### Sanitization and Reviewer Approvals
+Storage must be securely erased before disposal when technically possible to prevent information disclosure. Furthermore, disposal requires approval from two authorized reviewers before assets are released. An employee or ordinary IT support user cannot approve final disposal under any operational circumstances.
+
+### Audit Evidence and Retention
+The disposal record must include the device identifier and approval date. All formal disposal evidence is retained for 90 days in the demonstration system to ensure verifiable compliance with organizational audit requirements.

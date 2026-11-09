@@ -1,0 +1,22 @@
+Title: Device Replacement Support Procedure
+Document ID: it_device_support
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: internal
+Allowed Roles: it_support,admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This procedure defines how IT support handles damaged, defective, or failing company-issued hardware devices for staff members.
+
+### Intake and Assessment
+Employees report damaged or malfunctioning devices through IT support. When receiving a report, IT records the device identifier and reported symptoms in the tracking portal. A device that cannot boot must be assessed before replacement is initiated. In the event of a device with disabled disk encryption, IT must immediately escalate the incident to security.
+
+### Warranty and Approvals
+IT checks whether the device remains under warranty with the approved equipment vendor. All replacement requests require the support manager's approval prior to issuing new hardware.
+
+### Return and Documentation
+The original device must be returned according to the approved process for secure intake. Once equipment handoff is complete, the replacement ticket records the final device assignment to maintain accurate inventory records.

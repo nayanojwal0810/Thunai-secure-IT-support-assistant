@@ -1,0 +1,22 @@
+Title: Account Recovery Support Procedure
+Document ID: it_account_recovery
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: internal
+Allowed Roles: it_support,admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Overview
+This procedure defines the support steps IT personnel must execute when handling employee account recovery requests.
+
+### Request Intake and Verification
+To initiate account recovery, the employee must open a helpdesk request. Every request receives an identifier in the format SR-####. Before taking any recovery action, IT verifies the employee using the employee directory and manager confirmation. IT must never request the employee's existing password or MFA code during any interaction. If an identity check fails, IT must immediately stop the recovery process.
+
+### Recovery Execution and Escalation
+Once identity verification succeeds, IT sends recovery instructions through the approved employee communication channel. If the user reports lost authentication devices, the case must be referred to the identity security team for further device revocation and re-enrollment. Throughout the workflow, IT staff must maintain security standards and must not bypass verification under any circumstance.
+
+### Resolution
+After the user confirms access restoration, IT records the final resolution details in the support request before closing the ticket.

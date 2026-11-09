@@ -1,0 +1,22 @@
+Title: Security Exception Approval Procedure
+Document ID: admin_security_exceptions
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: restricted
+Allowed Roles: admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This procedure defines the submission criteria, approval boundaries, and lifecycle management requirements for granting formal corporate security exceptions.
+
+### Exception Submission Criteria
+Security exceptions require a documented business reason explaining why standard controls cannot be satisfied. Every exception must identify the affected system and associated technical scope. Crucially, exceptions cannot bypass mandatory disk encryption requirements on company assets.
+
+### Approval Authorities and Expiration
+The Security Lead must approve the exception before any policy deviations take effect. An ordinary IT support user cannot approve security exceptions under any operational circumstances. When granted, approved exceptions expire after 14 days.
+
+### Registry Logging and Closure
+Administrators record the responsible owner and expiration date in the central security exception register. Once the active window terminates, expired exceptions must be reviewed and closed to ensure security baselines are maintained.

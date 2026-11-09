@@ -1,0 +1,22 @@
+Title: Privileged Access Review Procedure
+Document ID: admin_access_reviews
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: restricted
+Allowed Roles: admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This procedure specifies quarterly review cycles, least privilege criteria, and offboarding revocation standards for high-privilege corporate access rights.
+
+### Review Cadence and Verification
+Administrators conduct privileged access reviews every quarter. Each review confirms the user, application, assigned role and business need for continued authorization. During the audit cycle, accounts unused for more than 30 days are flagged for review by the team. Administrators use the principle of least privilege to evaluate all permissions.
+
+### Authorization Authorities
+Manager approval alone cannot grant privileged access to corporate administrative platforms. The Security Lead approves privileged access changes across all sensitive environments.
+
+### Timely Revocation and Recordkeeping
+Offboarding-related privileged access must be removed within four hours of the approved offboarding event. To conclude each cycle, every review records its date, reviewer and outcome in the compliance repository.

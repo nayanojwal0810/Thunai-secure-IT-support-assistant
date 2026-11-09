@@ -1,0 +1,22 @@
+Title: MFA Recovery Support Procedure
+Document ID: it_mfa_support
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: internal
+Allowed Roles: it_support,admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This procedure instructs IT support staff on handling multi-factor authentication (MFA) issues, lost hardware, and account sign-in support.
+
+### Identity Verification
+Users who lose their MFA device must contact IT support to request assistance. Before taking action, IT verifies identity using two independent checks: employee directory information and manager confirmation. An employee's existing recovery codes must never be requested by IT. Furthermore, IT must not disable MFA simply to restore access for the user.
+
+### Recovery Workflow and Escalation
+IT can initiate the approved MFA recovery workflow only after verification has successfully concluded. An unsuccessful verification attempt must be escalated to the identity security team without delay. If an employee reports repeated suspicious MFA prompts, IT staff must treat this behavior as a security concern requiring investigation.
+
+### Recordkeeping
+IT records the reported issue, verification outcome and resolution in the ticket to maintain an auditable support record.

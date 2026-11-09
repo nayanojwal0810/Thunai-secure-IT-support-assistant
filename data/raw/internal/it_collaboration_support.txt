@@ -1,0 +1,22 @@
+Title: Collaboration Application Support Guide
+Document ID: it_collaboration_support
+Publisher: Thunai Demo Company
+Synthetic: true
+Classification: internal
+Allowed Roles: it_support,admin
+Version: 1
+Notice: Fictional demonstration content. Not a real company policy. No real credentials or personal information.
+
+---
+
+### Purpose
+This guide outlines troubleshooting practices for IT support when assisting employees with collaboration tool access and operational errors.
+
+### Supported Applications and Initial Checks
+IT supports access problems involving approved video meetings and team messaging applications. When an incident is logged, IT first checks whether the user's company account is active. Users should restart the application before advanced troubleshooting proceeds. IT records the application name and exact error message in the support request.
+
+### Permission Boundaries and Security Rules
+If the issue is caused by missing access permissions, requests must go through the access-request workflow. Throughout all assistance interactions, IT must not request passwords, recovery codes or meeting passwords from employees.
+
+### Outage Checks and Case Closure
+Problems affecting multiple employees are checked for a service outage across corporate systems. Finally, resolved cases must include the working solution to inform future helpdesk guidance.

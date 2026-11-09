@@ -1,5 +1,6 @@
 """Unit tests for permission-aware hybrid retrieval and Reciprocal Rank Fusion."""
 
+import copy
 import pytest
 from app.rag.hybrid_retrieval import HybridRetriever, compute_rrf_score
 
@@ -316,3 +317,161 @@ def test_retriever_corpus_alignment_and_integrity_check():
             bm25_retriever=MockRetriever(chunks=SAMPLE_CHUNKS),
             dense_retriever=BrokenDenseRetriever(chunks=SAMPLE_CHUNKS),
         )
+
+
+def test_corpus_validation_detects_changed_document_text():
+    """Test A: Verify constructor rejects matching chunk IDs when text content differs."""
+    bm25_chunks = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks = copy.deepcopy(SAMPLE_CHUNKS)
+    secret_text = "SECRET_CHANGED_TEXT_DO_NOT_LEAK"
+    dense_chunks[0]["text"] = secret_text
+
+    bm25_mock = MockRetriever(chunks=bm25_chunks)
+    dense_mock = MockRetriever(chunks=dense_chunks)
+
+    with pytest.raises(ValueError) as exc_info:
+        HybridRetriever(bm25_retriever=bm25_mock, dense_retriever=dense_mock)
+
+    err_msg = str(exc_info.value)
+    assert bm25_chunks[0]["chunk_id"] in err_msg
+    assert "text" in err_msg
+    assert secret_text not in err_msg
+
+
+def test_corpus_validation_detects_changed_topic():
+    """Test B: Verify constructor rejects mismatched topic metadata between corpora."""
+    bm25_chunks = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks[1]["topic"] = "T99"
+
+    bm25_mock = MockRetriever(chunks=bm25_chunks)
+    dense_mock = MockRetriever(chunks=dense_chunks)
+
+    with pytest.raises(ValueError) as exc_info:
+        HybridRetriever(bm25_retriever=bm25_mock, dense_retriever=dense_mock)
+
+    err_msg = str(exc_info.value)
+    assert bm25_chunks[1]["chunk_id"] in err_msg
+    assert "topic" in err_msg
+
+
+def test_corpus_validation_detects_changed_source_hash_and_version():
+    """Test C: Verify constructor rejects mismatched source_sha256 or version metadata."""
+    # Subtest 1: source_sha256 mismatch
+    bm25_chunks_1 = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks_1 = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks_1[0]["source_sha256"] = "altered_hash_123"
+
+    with pytest.raises(ValueError) as exc_info:
+        HybridRetriever(
+            bm25_retriever=MockRetriever(chunks=bm25_chunks_1),
+            dense_retriever=MockRetriever(chunks=dense_chunks_1),
+        )
+    assert bm25_chunks_1[0]["chunk_id"] in str(exc_info.value)
+    assert "source_sha256" in str(exc_info.value)
+
+    # Subtest 2: version mismatch in a separate fixture
+    bm25_chunks_2 = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks_2 = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks_2[0]["version"] = 99
+
+    with pytest.raises(ValueError) as exc_info:
+        HybridRetriever(
+            bm25_retriever=MockRetriever(chunks=bm25_chunks_2),
+            dense_retriever=MockRetriever(chunks=dense_chunks_2),
+        )
+    assert bm25_chunks_2[0]["chunk_id"] in str(exc_info.value)
+    assert "version" in str(exc_info.value)
+
+
+def test_corpus_validation_detects_permission_mismatch_and_allows_reordering():
+    """Test D: Verify constructor rejects permission mismatches and accepts reordered role lists."""
+    # Subtest 1: changed allowed_roles
+    bm25_chunks = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks[0]["allowed_roles"] = ["admin"]
+
+    with pytest.raises(ValueError) as exc_info:
+        HybridRetriever(
+            bm25_retriever=MockRetriever(chunks=bm25_chunks),
+            dense_retriever=MockRetriever(chunks=dense_chunks),
+        )
+    err_msg = str(exc_info.value)
+    assert bm25_chunks[0]["chunk_id"] in err_msg
+    assert "allowed_roles" in err_msg
+
+    # Subtest 2: reordered allowed_roles must NOT fail
+    bm25_chunks_reordered = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks_reordered = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks_reordered[0]["allowed_roles"] = ["admin", "employee", "it_support"]
+
+    hybrid = HybridRetriever(
+        bm25_retriever=MockRetriever(chunks=bm25_chunks_reordered),
+        dense_retriever=MockRetriever(chunks=dense_chunks_reordered),
+    )
+    assert hybrid is not None
+
+
+def test_corpus_validation_detects_missing_and_unexpected_fields():
+    """Test E: Verify constructor rejects missing schema fields or unexpected extra fields."""
+    # Subtest 1: missing document_title
+    bm25_chunks_1 = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks_1 = copy.deepcopy(SAMPLE_CHUNKS)
+    del dense_chunks_1[0]["document_title"]
+
+    with pytest.raises(ValueError) as exc_info:
+        HybridRetriever(
+            bm25_retriever=MockRetriever(chunks=bm25_chunks_1),
+            dense_retriever=MockRetriever(chunks=dense_chunks_1),
+        )
+    err_msg = str(exc_info.value)
+    assert bm25_chunks_1[0]["chunk_id"] in err_msg
+    assert "document_title" in err_msg
+
+    # Subtest 2: unexpected extra field
+    bm25_chunks_2 = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks_2 = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks_2[0]["unexpected_metadata_field"] = "illegal_value"
+
+    with pytest.raises(ValueError) as exc_info:
+        HybridRetriever(
+            bm25_retriever=MockRetriever(chunks=bm25_chunks_2),
+            dense_retriever=MockRetriever(chunks=dense_chunks_2),
+        )
+    err_msg = str(exc_info.value)
+    assert bm25_chunks_2[0]["chunk_id"] in err_msg
+    assert "unexpected_metadata_field" in err_msg
+
+
+def test_matching_corpora_initialization_and_search_behavior():
+    """Test F: Verify matching corpora initialize cleanly and search behavior remains exact."""
+    bm25_chunks = copy.deepcopy(SAMPLE_CHUNKS)
+    dense_chunks = copy.deepcopy(SAMPLE_CHUNKS)
+
+    bm25_cands = [
+        dict(bm25_chunks[0], score=15.0),
+        dict(bm25_chunks[1], score=10.0),
+    ]
+    dense_cands = [
+        dict(dense_chunks[1], score=0.85),
+        dict(dense_chunks[2], score=0.70),
+    ]
+
+    bm25_mock = MockRetriever(chunks=bm25_chunks, return_candidates=bm25_cands)
+    dense_mock = MockRetriever(chunks=dense_chunks, return_candidates=dense_cands)
+
+    hybrid = HybridRetriever(bm25_retriever=bm25_mock, dense_retriever=dense_mock)
+    results = hybrid.search(query="password", role="employee", top_k=5)
+
+    assert len(results) == 3
+    # rrf ordering: chunk_pub_2 (dual), chunk_pub_1 (bm25), chunk_pub_3 (dense)
+    assert [r["chunk_id"] for r in results] == ["chunk_pub_2", "chunk_pub_1", "chunk_pub_3"]
+    assert results[0]["score"] == pytest.approx(1.0 / 62 + 1.0 / 61)
+    assert results[1]["score"] == pytest.approx(1.0 / 61)
+    assert results[2]["score"] == pytest.approx(1.0 / 62)
+
+    # Verify role restrictions still apply
+    with pytest.raises(ValueError, match="Unknown role"):
+        hybrid.search(query="password", role="unauthorized_role", top_k=5)
+
+

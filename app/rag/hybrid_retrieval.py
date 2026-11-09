@@ -68,6 +68,67 @@ class HybridRetriever:
         if bm25_cids != dense_cids:
             raise ValueError("Retriever chunk ID sequence mismatch between BM25 and dense retriever")
 
+        # Compare complete chunk collections and validate schemas
+        for bm25_chunk, dense_chunk in zip(bm25_chunks, dense_chunks):
+            cid = bm25_chunk.get("chunk_id") or dense_chunk.get("chunk_id", "unknown")
+
+            bm25_keys = set(bm25_chunk.keys())
+            dense_keys = set(dense_chunk.keys())
+
+            # Check for missing required fields
+            missing_bm25 = REQUIRED_SCHEMA_KEYS - bm25_keys
+            if missing_bm25:
+                raise ValueError(
+                    f"Corpus schema error in chunk '{cid}': BM25 chunk missing required field(s) {sorted(missing_bm25)}"
+                )
+            missing_dense = REQUIRED_SCHEMA_KEYS - dense_keys
+            if missing_dense:
+                raise ValueError(
+                    f"Corpus schema error in chunk '{cid}': dense chunk missing required field(s) {sorted(missing_dense)}"
+                )
+
+            # Check for unexpected extra fields
+            extra_bm25 = bm25_keys - REQUIRED_SCHEMA_KEYS
+            if extra_bm25:
+                raise ValueError(
+                    f"Corpus schema error in chunk '{cid}': BM25 chunk has unexpected field(s) {sorted(extra_bm25)}"
+                )
+            extra_dense = dense_keys - REQUIRED_SCHEMA_KEYS
+            if extra_dense:
+                raise ValueError(
+                    f"Corpus schema error in chunk '{cid}': dense chunk has unexpected field(s) {sorted(extra_dense)}"
+                )
+
+            # Compare every required field between matching records
+            for field in sorted(REQUIRED_SCHEMA_KEYS):
+                val_bm25 = bm25_chunk[field]
+                val_dense = dense_chunk[field]
+
+                if field == "allowed_roles":
+                    if not isinstance(val_bm25, list) or not isinstance(val_dense, list):
+                        raise ValueError(
+                            f"Corpus validation mismatch for chunk '{cid}' on field 'allowed_roles': "
+                            f"allowed_roles must be a list"
+                        )
+                    if set(val_bm25) != set(val_dense):
+                        raise ValueError(
+                            f"Corpus validation mismatch for chunk '{cid}' on field 'allowed_roles': "
+                            f"role sets do not match: {sorted(val_bm25)} vs {sorted(val_dense)}"
+                        )
+                elif field == "text":
+                    if val_bm25 != val_dense:
+                        # Do not include full source text in error message to protect sensitive content
+                        raise ValueError(
+                            f"Corpus validation mismatch for chunk '{cid}' on field 'text': "
+                            f"text content differs between BM25 and dense retriever"
+                        )
+                else:
+                    if val_bm25 != val_dense:
+                        raise ValueError(
+                            f"Corpus validation mismatch for chunk '{cid}' on field '{field}': "
+                            f"BM25 has {val_bm25!r}, dense has {val_dense!r}"
+                        )
+
         self.chunks = bm25_chunks
         self.corpus_sha256 = (
             getattr(self.dense_retriever, "corpus_sha256", None)
@@ -184,3 +245,4 @@ class HybridRetriever:
         results.sort(key=lambda item: (-item["score"], item["chunk_id"]))
 
         return results[:top_k]
+
